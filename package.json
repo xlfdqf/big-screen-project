@@ -1,0 +1,38 @@
+{
+  "name": "homepage",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "start": " npm run serve"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "echarts": "^4.4.0",
+    "element-ui": "^2.4.9",
+    "js-md5": "^0.7.3",
+    "lib-flexible": "^0.3.2",
+    "prerender-spa-plugin": "^3.4.0",
+    "vue": "^2.5.17",
+    "vue-countupjs": "^1.0.0",
+    "vue-router": "^3.0.1",
+    "vue-scrollto": "^2.13.0",
+    "vuex": "^3.1.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.1.1",
+    "@vue/cli-plugin-eslint": "^3.1.1",
+    "@vue/cli-service": "^3.8.3",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-component": "^1.1.1",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.0.0-0",
+    "node-sass": "^4.12.0",
+    "prerender-spa-plugin": "^3.4.0",
+    "px2rem-loader": "^0.1.9",
+    "sass-loader": "^8.0.0",
+    "vue-template-compiler": "^2.5.17"
+  }
+}
