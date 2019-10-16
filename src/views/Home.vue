@@ -5,11 +5,21 @@
          <div class="top-content">
            <p class="top-title">智慧金融太空舱数据大屏</p>
            <div class="top-img"><div class="top-img-item"></div></div>
-          <!-- <div class="top-date"><span style="color:#00D2FF">2019</span>年<span style="color:#00D2FF">10</span>月</div> -->
+           <div class="top-date"><span style="color:#00D2FF;">2019&nbsp;</span>年<span style="color:#00D2FF;">&nbsp;10</span>&nbsp;月</div>
          </div>
       </div>
        <div class="bottom">
-         <div class="left fl"></div>      
+         <div class="left fl">
+           <div class="left-top">
+             <div class="left-top1 fl"><div class="left-top1-tit"><div class="left-top1-title" style="float:right; border-right: 0.3125rem solid #00d2ff;">当前特征IV值</div></div><div class="bingEchart1"><bingEchart1 /></div></div>
+             <div class="left-top2 fl"><div class="people"></div></div>
+             <div class="left-top3 fl"><div class="left-top1-tit"><div class="left-top1-title" style="float:left; border-left: 0.3125rem solid #00d2ff;">当前特征WOE值</div></div><div class="bingEchart1"><bingEchart2 /></div></div>
+           </div>
+           <div class="left-bottom">
+             <div  class="left-bottom1">特征IV值分布</div>
+             <div  class="left-botto2"></div> 
+           </div>
+         </div>      
 			   <div class="right fl">
             <div class="right-item">
               <div class="right-items">
@@ -44,6 +54,7 @@
 </template>
 
 <script>
+import echarts from "echarts";
 import nxCountUp from "@/components/nx-count-up";
 import huanEchart from "@/components/Home/huanEchart"; //环形图组件
 import yibiaoEchart1 from "@/components/Home/yibiaoEchart1"; //仪表盘1组件
@@ -51,6 +62,8 @@ import yibiaoEchart2 from "@/components/Home/yibiaoEchart2"; //仪表盘2组件
 import yibiaoEchart3 from "@/components/Home/yibiaoEchart3"; //仪表盘3组件
 import zhexianEchart1 from "@/components/Home/zhexianEchart1"; //折线图1组件
 import zhexianEchart2 from "@/components/Home/zhexianEchart2"; //折线图2组件
+import bingEchart1 from "@/components/Home/bingEchart1"; //饼图1组件
+import bingEchart2 from "@/components/Home/bingEchart2"; //饼图1组件
 export default {
   name: "home",
   components: {
@@ -60,12 +73,21 @@ export default {
     yibiaoEchart2,
     yibiaoEchart3,
     zhexianEchart1,
-    zhexianEchart2
+    zhexianEchart2,
+    bingEchart1,
+    bingEchart2
   },
   data() {
     return {};
   },
-  mounted() {},
+  mounted() {
+    let bingEchart1 = echarts.init(document.querySelector(".bingEchart1"));
+    bingEchart1.setOption(this.option);
+    //echart按比例缩放
+    window.addEventListener("resize", () => {
+      bingEchart1.resize();
+    });
+  },
   methods: {}
 };
 </script>
@@ -91,6 +113,7 @@ export default {
   /* border: 1px solid blue; */
   clear: both;
   font-size: 30px;
+  position: relative;
 }
 .top-content {
   width: 80%;
@@ -109,7 +132,7 @@ export default {
 }
 .top-img {
   width: 100%;
-  height: 70%;
+  height: 100%;
   float: left;
 }
 .top-img-item {
@@ -119,12 +142,13 @@ export default {
   background-size: 100% 100%;
 }
 .top-date {
-  /* text-align: center;
-  vertical-align: middle; */
   color: #ffffff;
   font-size: 0.875rem;
   float: right;
-  position: relative;
+  right: -6.25rem;
+  position: absolute;
+
+  /* font-family: "LESLIE-Regular" !important; */
 }
 .bottom {
   width: 100%;
@@ -172,7 +196,7 @@ export default {
 .right-item-tit {
   border-left: #01d5e1 0.3125rem solid;
   color: #02a6ce;
-  font-size: 0.75rem;
+  font-size: 1rem;
   padding-left: 0.3125rem;
 }
 .yibiaochart {
@@ -180,15 +204,81 @@ export default {
   height: 90%;
 }
 .yibiaochart-item {
-  height: 90%;
+  height: 80%;
   width: 33%;
   float: left;
   position: relative;
 }
 .yibiaochart-item p {
-  color: #01d5e1;
+  color: #00ffff;
   text-align: center;
+  font-size: 1rem;
   height: 10%;
   width: 100%;
 }
+
+/* left css */
+.left-top {
+  width: 100%;
+  height: 70%;
+}
+.left-top1 {
+  width: 33%;
+  height: 100%;
+  /* background-color: #01d5e1; */
+}
+.left-top2 {
+  width: 33%;
+  height: 100%;
+  /* background-color: red; */
+}
+.left-top3 {
+  width: 33%;
+  height: 100%;
+  /* background-color: #fff; */
+}
+.people {
+  width: 100%;
+  height: 100%;
+  background: url("https://ow.speedbi.cn:7272/uploads/img/08:57:00:f6:b9:fe/7c8ba7d0-ebc6-11e9-8599-fd5d72c7833f.png");
+  background-size: 100% 100%;
+}
+/* left css end */
+
+/* 饼图 css */
+.left-top1-tit {
+  width: 100%;
+  height: 30%;
+}
+.left-top1-title {
+  color: #00d2ff;
+  font-size: 1.25rem;
+
+  padding-right: 0.3125rem;
+  box-sizing: border-box;
+  margin-top: 6.25rem;
+}
+.bingEchart1 {
+  width: 100%;
+  height: 70%;
+}
+/* 饼图 css */
+
+/* 曲线 css */
+.left-bottom {
+  width: 90%;
+  height: 30%;
+  background: url("../assets/image/quxianbg.png");
+  background-size: 100% 100%;
+  margin: 0 auto;
+}
+.left-bottom1 {
+  color: #00d2ff;
+  border-left: 0.3125rem solid #00d2ff;
+  font-size: 1.25rem;
+  padding-left: 0.625rem;
+  box-sizing: border-box;
+  margin: 1.25rem 0;
+}
+/* 曲线 css */
 </style>
