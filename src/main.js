@@ -1,5 +1,4 @@
 import Vue from 'vue'
-import App from './App.vue'
 import router from './router'
 import { Popover, Col, Row, Tabs, TabPane, Card, Button, Pagination, Form, FormItem, Input, Table, TableColumn, DatePicker, Loading, Message, Progress } from 'element-ui';
 import VueScrollTo from "vue-scrollto";
@@ -7,11 +6,15 @@ import 'lib-flexible'
 import axios from 'axios';
 import store from './store/store'
 import echarts from 'echarts';
+import VCharts from 'v-charts'
+import App from './App.vue'
+import 'v-charts/lib/style.css'
 
 Vue.prototype.$axios = axios;
 // Vue.prototype.$store = store;
 Vue.config.productionTip = false
-Vue.use(echarts)
+Vue.use(echarts);
+Vue.use(VCharts);
 Vue.use(Popover);
 Vue.use(Col);
 Vue.use(Row);

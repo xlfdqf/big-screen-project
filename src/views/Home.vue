@@ -1,247 +1,183 @@
 <template>
   <div class="home">
-      <div class="top"><nx-count-up :start="1" :end="10000"/></div>
-			 <div class="left fl" id="china-map"></div>      <!-- 地图 -->
-			<div class="center fl">22</div>   <!--机器人-->
-			<div class="right fl">33</div>     <!--环形图-->
+      <div class="top">
+         <div class="top-content">
+           <p class="top-title">智慧金融太空舱数据大屏</p>
+           <div class="top-img"><div class="top-img-item"></div></div>
+          <!-- <div class="top-date"><span style="color:#00D2FF">2019</span>年<span style="color:#00D2FF">10</span>月</div> -->
+         </div>
+      </div>
+       <div class="bottom">
+         <div class="left fl"></div>      
+			   <div class="right fl">
+            <div class="right-item">
+              <div class="right-items">
+                  <div class="right-item-tit">历史用户统计</div>
+                  <div class="yibiaochart"> 
+                    <div class="yibiaochart-item"><yibiaoEchart1 /><p>总特征：1200</p></div>
+                    <div class="yibiaochart-item"><yibiaoEchart2 /><p>模型特征：250</p></div>
+                    <div class="yibiaochart-item"><yibiaoEchart3 /><p>相似度比对：20</p></div>
+                  </div>
+              </div>
+            </div>
+            <div class="right-item"> 
+              <div class="right-items">
+                  <div class="right-item-tit">当前IV值平均分</div>
+                   <div class="yibiaochart"> 
+                     <zhexianEchart1 />
+                  </div>
+              </div>
+            </div>
+            <div class="right-item">
+               <div class="right-items">
+                  <div class="right-item-tit">历史IV值平均分</div>
+                   <div class="yibiaochart"> 
+                     <zhexianEchart2 />
+                  </div>
+              </div>
+            </div>
+         </div>     
+       </div>
+			<!-- <div class="center fl">22</div> 机器人  -->
 	</div>
 </template>
 
 <script>
-import echarts from "echarts";
 import nxCountUp from "@/components/nx-count-up";
+import huanEchart from "@/components/Home/huanEchart"; //环形图组件
+import yibiaoEchart1 from "@/components/Home/yibiaoEchart1"; //仪表盘1组件
+import yibiaoEchart2 from "@/components/Home/yibiaoEchart2"; //仪表盘2组件
+import yibiaoEchart3 from "@/components/Home/yibiaoEchart3"; //仪表盘3组件
+import zhexianEchart1 from "@/components/Home/zhexianEchart1"; //折线图1组件
+import zhexianEchart2 from "@/components/Home/zhexianEchart2"; //折线图2组件
 export default {
   name: "home",
-  components: { nxCountUp },
+  components: {
+    nxCountUp,
+    huanEchart,
+    yibiaoEchart1,
+    yibiaoEchart2,
+    yibiaoEchart3,
+    zhexianEchart1,
+    zhexianEchart2
+  },
   data() {
-    return {
-      option: {
-        tooltip: {
-          trigger: "item",
-          position: ["50%", "50%"],
-          formatter: "{b}:{d}%"
-          // formatter: this.echartFormatter
-        },
-        legend: {
-          show: false //隐藏图例
-        },
-        //设置饼状图每个颜色块的颜色
-        color: ["#4EC4DD", "#2C6D7C"],
-        emphasis: {
-          show: false
-        },
-        graphic: {
-          //图形中间文字
-          type: "text",
-          left: "center",
-          top: "center",
-          z: 10,
-          zlevel: 1000,
-          show: false,
-          style: {
-            text: "66%",
-            textAlign: "center",
-            fill: "#4EC4DD",
-            fontSize: 40
-          }
-        },
-        series: [
-          {
-            type: "pie",
-            radius: ["50%", "70%"],
-            hoverAnimation: false,
-            avoidLabelOverlap: false,
-            label: {
-              normal: {
-                show: false,
-                position: "center"
-              },
-              emphasis: {
-                show: true,
-                textStyle: {
-                  fontSize: "30",
-                  fontWeight: "bold"
-                }
-              }
-            },
-            labelLine: {
-              normal: {
-                show: false
-              }
-            },
-            data: [
-              { value: 100, name: "直接访问" },
-              { value: 310, name: "邮件营销" }
-            ]
-          }
-        ]
-      }
-    };
+    return {};
   },
-  mounted() {
-    this.huanEchart();
-    this.chainaMap();
-  },
-  methods: {
-    //环形图
-    huanEchart() {
-      let chartBar = echarts.init(document.querySelector(".right"));
-      chartBar.setOption(this.option);
-      //echart按比例缩放
-      window.onresize = function() {
-        chartBar.resize();
-      };
-    },
-    //中国地图
-    chainaMap() {
-      let chinaMap = echarts.init(document.getElementById("china-map"));
-      chinaMap.setOption({
-        backgroundColor: "#272D3A",
-        // 标题
-        title: {
-          text: "中国地图闪闪发光",
-          left: "center",
-          textStyle: {
-            color: "#fff"
-          }
-        },
-        // 地图上圆点的提示
-        tooltip: {
-          trigger: "item",
-          formatter: function(params) {
-            return params.name + " : " + params.value[2];
-          }
-        },
-        // 图例按钮 点击可选择哪些不显示
-        legend: {
-          orient: "vertical",
-          left: "left",
-          top: "bottom",
-          data: ["地区热度", "top5"],
-          textStyle: {
-            color: "#fff"
-          }
-        },
-        // 地理坐标系组件
-        geo: {
-          map: "china",
-          label: {
-            // true会显示城市名
-            emphasis: {
-              show: false
-            }
-          },
-          itemStyle: {
-            // 地图背景色
-            normal: {
-              areaColor: "#465471",
-
-              borderColor: "#282F3C"
-            },
-            // 悬浮时
-            emphasis: {
-              areaColor: "#8796B4"
-            }
-          }
-        },
-        // 系列列表
-        series: [
-          {
-            name: "地区热度",
-            // 表的类型 这里是散点
-            type: "scatter",
-            // 使用地理坐标系，通过 geoIndex 指定相应的地理坐标系组件
-            coordinateSystem: "geo",
-            data: [],
-            // 标记的大小
-            symbolSize: 12,
-            // 鼠标悬浮的时候在圆点上显示数值
-            label: {
-              normal: {
-                show: false
-              },
-              emphasis: {
-                show: false
-              }
-            },
-            itemStyle: {
-              normal: {
-                color: "#ddb926"
-              },
-              // 鼠标悬浮的时候圆点样式变化
-              emphasis: {
-                borderColor: "#fff",
-                borderWidth: 1
-              }
-            }
-          },
-          {
-            name: "top5",
-            // 表的类型 这里是散点
-            type: "effectScatter",
-            // 使用地理坐标系，通过 geoIndex 指定相应的地理坐标系组件
-            coordinateSystem: "geo",
-            data: [],
-            // 标记的大小
-            symbolSize: 12,
-            showEffectOn: "render",
-            rippleEffect: {
-              brushType: "stroke"
-            },
-            hoverAnimation: true,
-            label: {
-              normal: {
-                show: false
-              }
-            },
-            itemStyle: {
-              normal: {
-                color: "#f4e925",
-                shadowBlur: 10,
-                shadowColor: "#333"
-              }
-            },
-            zlevel: 1
-          }
-        ]
-      });
-    }
-  }
+  mounted() {},
+  methods: {}
 };
 </script>
 
 <style scoped>
-.top {
-  width: 100%;
-  height: 10%;
-  color: #ffffff;
-  border: 1px solid blue;
-  clear: both;
-  font-size: 30px;
+.fl {
+  float: left;
 }
 .home {
   width: 100%;
   height: 100%;
-  border: 1px solid red;
   position: absolute;
-  /* display: flex; */
+  box-sizing: border-box;
 }
-.left {
-  width: 33%;
-  height: 100%;
+.top {
+  width: 100%;
+  height: 7%;
+  color: #ffffff;
+  /* border: 1px solid blue; */
+  clear: both;
+  font-size: 30px;
+  margin-top: 3%;
 }
-.center {
-  width: 33%;
+.top-content {
+  width: 80%;
   height: 100%;
-  background: url("https://ow.speedbi.cn:7272/uploads/img/08:57:00:f6:b9:fe/7c8ba7d0-ebc6-11e9-8599-fd5d72c7833f.png");
+  margin: 0 auto;
+  box-sizing: border-box;
+  position: relative;
+}
+.top-title {
+  width: 100%;
+  height: 30%;
+  text-align: center;
+  color: #00d2ff;
+  box-sizing: border-box;
+  font-size: 35px;
+}
+.top-img {
+  width: 100%;
+  height: 70%;
+  float: left;
+}
+.top-img-item {
+  width: 100%;
+  height: 100%;
+  background: url("../assets/image/logo.png");
   background-size: 100% 100%;
 }
-.right {
-  width: 33%;
-  height: 100%;
+.top-date {
+  text-align: center;
+  vertical-align: middle;
+  color: #ffffff;
+  font-size: 0.875rem;
+  max-width: 100%;
 }
-.fl {
+.bottom {
+  width: 100%;
+  height: 90%;
+  max-width: 100%;
+  /* border: 1px solid red; */
+}
+.left {
+  width: 60%;
+  height: 100%;
+  /* background-color: #3887aa; */
+}
+/* .center {
+  width: 33%;
+  height: 80%;
+  background: url("https://ow.speedbi.cn:7272/uploads/img/08:57:00:f6:b9:fe/7c8ba7d0-ebc6-11e9-8599-fd5d72c7833f.png");
+  background-size: 100% 100%;
+} */
+.right {
+  width: 40%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.right-items {
+  width: 95%;
+  height: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0.625rem 0;
+}
+.right-item {
+  width: 95%;
+  height: 31%;
+  box-sizing: border-box;
+  padding: 0 10px;
+  margin: 0.26rem;
+  border: 1px solid #02c1d4;
+}
+.right-item-tit {
+  border-left: #01d5e1 0.3125rem solid;
+  color: #02a6ce;
+  font-size: 0.75rem;
+  padding-left: 0.3125rem;
+}
+.yibiaochart {
+  width: 100%;
+  height: 90%;
+}
+.yibiaochart-item {
+  height: 90%;
+  width: 33%;
   float: left;
-  border: 1px solid black;
+  position: relative;
+}
+.yibiaochart-item p {
+  color: #01d5e1;
+  text-align: center;
+  height: 10%;
+  width: 100%;
 }
 </style>

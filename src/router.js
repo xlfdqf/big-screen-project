@@ -24,6 +24,11 @@ export default new Router({
       component: () => import('./views/Login.vue')
     },
     // {
+    //   path: '/huanEchart',
+    //   name: 'huanEchart',
+    //   component: () => import('./components/Home/huanEchart.vue')
+    // },
+    // {
     //   path: '/activityDetail',
     //   meta: {
     //     requireAuth: true, //进入该路由需要登录
