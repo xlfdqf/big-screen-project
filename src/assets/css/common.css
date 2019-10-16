@@ -6,5 +6,5 @@ html,body,p,a,span{
     padding: 0;
 }
 body {
-    background-color: #000000;
+    background: url("../../assets/image/bg3.png");
 }

@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <div class="black"></div>
       <div class="top">
          <div class="top-content">
            <p class="top-title">智慧金融太空舱数据大屏</p>
@@ -79,6 +80,10 @@ export default {
   position: absolute;
   box-sizing: border-box;
 }
+.black {
+  width: 100%;
+  height: 3%;
+}
 .top {
   width: 100%;
   height: 7%;
@@ -86,7 +91,6 @@ export default {
   /* border: 1px solid blue; */
   clear: both;
   font-size: 30px;
-  margin-top: 3%;
 }
 .top-content {
   width: 80%;
@@ -115,11 +119,12 @@ export default {
   background-size: 100% 100%;
 }
 .top-date {
-  text-align: center;
-  vertical-align: middle;
+  /* text-align: center;
+  vertical-align: middle; */
   color: #ffffff;
   font-size: 0.875rem;
-  max-width: 100%;
+  float: right;
+  position: relative;
 }
 .bottom {
   width: 100%;
@@ -142,6 +147,7 @@ export default {
   width: 40%;
   height: 100%;
   box-sizing: border-box;
+  padding-top: 2.5rem;
 }
 .right-items {
   width: 95%;
@@ -152,11 +158,16 @@ export default {
 }
 .right-item {
   width: 95%;
-  height: 31%;
+  height: 29%;
   box-sizing: border-box;
   padding: 0 10px;
-  margin: 0.26rem;
-  border: 1px solid #02c1d4;
+  margin-bottom: 2.5rem;
+  background: url("../assets/image/kuang.png");
+  background-size: 100% 100%;
+  /* border: 1px solid #02c1d4; */
+}
+.right-item:last-child {
+  margin-bottom: 0;
 }
 .right-item-tit {
   border-left: #01d5e1 0.3125rem solid;
