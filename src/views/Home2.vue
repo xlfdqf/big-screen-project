@@ -371,6 +371,7 @@ export default {
 }
 .count p {
   color: #00d2ff;
+  font-weight: bold;
   font-size: 14px;
 
   padding-bottom: 0.3125rem;

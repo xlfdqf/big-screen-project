@@ -1,12 +1,12 @@
 <template>
   <!--环形图-->
-  <div class="myEchart" style="width:100%;height:100%;"> </div>
+  <div class="huanEchart1" style="width:100%;height:100%;"> </div>
 </template>
 
 <script>
 import echarts from "echarts";
 export default {
-  name: "huanEchart",
+  name: "huanEchart1",
   data() {
     return {
       option: {
@@ -20,7 +20,7 @@ export default {
           show: false //隐藏图例
         },
         //设置饼状图每个颜色块的颜色
-        color: ["#4EC4DD", "#2C6D7C"],
+        color: ["#00FFBF", "#2C6D7C"],
         emphasis: {
           show: false
         },
@@ -33,11 +33,10 @@ export default {
           zlevel: 1000,
           show: false,
           style: {
-            text: "78" + "\n" + "阈值",
-            // text: "环图中添加颜色" + "\n" + "和series平级",
+            text: "0.28" + "\n" + "ROC曲线",
             textAlign: "center",
-            fill: "#4EC4DD",
-            fontSize: 20
+            fill: "#00FFBF",
+            fontSize: 18
           }
         },
         series: [
@@ -64,7 +63,7 @@ export default {
                 show: false
               }
             },
-            data: [{ value: 78, name: "阈值" }, { value: 22, name: "其他" }]
+            data: [{ value: 10, name: "ROC曲线" }, { value: 90, name: "其他" }]
           }
         ]
       }
@@ -76,11 +75,11 @@ export default {
   methods: {
     //环形图
     huanEchart() {
-      let myEchart = echarts.init(document.querySelector(".myEchart"));
-      myEchart.setOption(this.option);
+      let huanEchart1 = echarts.init(document.querySelector(".huanEchart1"));
+      huanEchart1.setOption(this.option);
       //echart按比例缩放
       window.addEventListener("resize", () => {
-        myEchart.resize();
+        huanEchart1.resize();
       });
     }
   }

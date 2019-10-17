@@ -62,19 +62,19 @@ export default {
             type: "bar",
             barGap: 0,
             // label: labelOption,
-            data: [320, 332, 301]
+            data: [320, 332, 301, 225]
           },
           {
             name: "可疑",
             type: "bar",
             // label: labelOption,
-            data: [220, 182, 191]
+            data: [220, 182, 191, 225]
           },
           {
             name: "劣质",
             type: "bar",
             // label: labelOption,
-            data: [150, 232, 201]
+            data: [150, 232, 201, 225]
           }
         ]
       }
