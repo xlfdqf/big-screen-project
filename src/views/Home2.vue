@@ -22,9 +22,7 @@
               <div class="right-items">
                   <div class="right-item-tit">上个月用户统计</div>
                   <div class="yibiaochart"> 
-                    <div class="yibiaochart-item"><yibiaoEchart1 /></div>
-                    <div class="yibiaochart-item"><yibiaoEchart2 /></div>
-                    <div class="yibiaochart-item"><yibiaoEchart3 /></div>
+                    <zhuzhuangtuEchart1 />
                   </div>
               </div>
             </div>
@@ -32,6 +30,7 @@
               <div class="right-items">
                   <div class="right-item-tit">全年用户统计</div>
                    <div class="yibiaochart"> 
+                     <zhuzhuangtuEchart2 />
                   </div>
               </div>
             </div>
@@ -39,6 +38,7 @@
                <div class="right-items">
                   <div class="right-item-tit">历史IV值平均分</div>
                    <div class="yibiaochart"> 
+                     <zhexianEchart/>
                   </div>
               </div>
             </div>
@@ -51,23 +51,20 @@
 import echarts from "echarts";
 import nxCountUp from "@/components/nx-count-up";
 import zhexianEchart from "@/components/Home2/zhexianEchart"; //折线图1组件
+import zhuzhuangtuEchart1 from "@/components/Home2/zhuzhuangtuEchart1"; //柱状图1组件
+import zhuzhuangtuEchart2 from "@/components/Home2/zhuzhuangtuEchart2"; //柱状图2组件
 export default {
   name: "home2",
   components: {
     nxCountUp,
-    zhexianEchart
+    zhexianEchart,
+    zhuzhuangtuEchart1,
+    zhuzhuangtuEchart2
   },
   data() {
     return {};
   },
-  mounted() {
-    let bingEchart1 = echarts.init(document.querySelector(".bingEchart1"));
-    bingEchart1.setOption(this.option);
-    //echart按比例缩放
-    window.addEventListener("resize", () => {
-      bingEchart1.resize();
-    });
-  },
+  mounted() {},
   methods: {}
 };
 </script>
@@ -139,20 +136,20 @@ export default {
 .left {
   width: 25%;
   height: 100%;
-  background-color: #3887aa;
+  /* background-color: #3887aa; */
 }
 .center {
   width: 50%;
   height: 100%;
   background-size: 100% 100%;
-  background-color: #fff;
+  /* background-color: #fff; */
 }
 .right {
   width: 25%;
   height: 100%;
   box-sizing: border-box;
   padding-top: 1.25rem;
-  background-color: #3887aa;
+  /* background-color: #3887aa; */
 }
 .right-items {
   width: 95%;

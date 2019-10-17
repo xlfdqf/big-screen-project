@@ -248,6 +248,7 @@ export default {
   height: 100%;
   /* background: url("https://ow.speedbi.cn:7272/uploads/img/08:57:00:f6:b9:fe/7c8ba7d0-ebc6-11e9-8599-fd5d72c7833f.png"); */
   background: url("../assets/image/people.gif");
+  /* background: url("../assets/image/people2.png"); */
   background-size: 100% 100%;
 }
 /* left css end */

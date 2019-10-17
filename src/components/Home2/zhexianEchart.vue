@@ -119,13 +119,13 @@ export default {
   methods: {
     //仪表盘
     huanEchart() {
-      let zhexianEchart1 = echarts.init(
-        document.querySelector(".zhexianEchart1")
+      let zhexianEchart = echarts.init(
+        document.querySelector(".zhexianEchart")
       );
-      zhexianEchart1.setOption(this.option);
+      zhexianEchart.setOption(this.option);
       //echart按比例缩放
       window.addEventListener("resize", () => {
-        zhexianEchart1.resize();
+        zhexianEchart.resize();
       });
     }
   }
