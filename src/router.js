@@ -31,11 +31,11 @@ export default new Router({
       name: 'login',
       component: () => import('./views/Login.vue')
     },
-    // {
-    //   path: '/huanEchart',
-    //   name: 'huanEchart',
-    //   component: () => import('./components/Home/huanEchart.vue')
-    // },
+    {
+      path: '/mapEchart',
+      name: 'mapEchart',
+      component: () => import('./components/Home2/mapEchart.vue') //中国地图
+    },
     // {
     //   path: '/activityDetail',
     //   meta: {

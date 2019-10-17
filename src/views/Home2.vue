@@ -53,9 +53,36 @@
               </div>
             </div>
          </div>   
-            <!-- 中间 -->
+             <!-- 中间 部分-->
           <div class="center fl">
-
+            <div class="center-top">
+              <div class="center-top-item">
+                <div class="count">
+                  <p>浙江借款总人数</p>
+                  <div class="center-top-item-img">
+                     <p><nx-count-up :start="1" :end="28747"/></p>
+                  </div>
+                </div>
+              </div>
+               <div class="center-top-item"> 
+                 <div class="count">
+                  <p>浙江上月借款人数</p>
+                  <div class="center-top-item-img">
+                     <p><nx-count-up :start="1" :end="12541"/></p>
+                  </div>
+                  </div>
+                </div>
+                <div class="center-top-item">
+                   <div class="count">
+                  <p>浙江昨天借款人数</p>
+                  <div class="center-top-item-img">
+                     <p><nx-count-up :start="1" :end="1023"/></p>
+                  </div>
+                  </div></div>
+            </div>
+            <div class="center-bottom">
+              <mapEchart />
+            </div>
           </div>
             <!-- 中间 -->
 			   <div class="right fl">
@@ -83,7 +110,8 @@
                   </div>
               </div>
             </div>
-         </div>     
+         </div>   
+          
        </div>
 	</div>
 </template>
@@ -98,6 +126,7 @@ import zhexianEchart from "@/components/Home2/zhexianEchart"; //折线图1组件
 import zhuzhuangtuEchart1 from "@/components/Home2/zhuzhuangtuEchart1"; //柱状图1组件
 import zhuzhuangtuEchart2 from "@/components/Home2/zhuzhuangtuEchart2"; //柱状图2组件
 import bingEchart1 from "@/components/Home/bingEchart1"; //饼图1组件
+import mapEchart from "@/components/Home2/mapEchart"; //中国地图组件
 export default {
   name: "home2",
   components: {
@@ -108,7 +137,8 @@ export default {
     zhexianEchart,
     zhuzhuangtuEchart1,
     zhuzhuangtuEchart2,
-    bingEchart1
+    bingEchart1,
+    mapEchart
   },
   data() {
     return {};
@@ -191,7 +221,7 @@ export default {
   width: 50%;
   height: 100%;
   background-size: 100% 100%;
-  /* background-color: #fff; */
+  /* background: url("../assets/image/logo.png"); */
 }
 .right {
   width: 25%;
@@ -311,4 +341,56 @@ export default {
   padding-left: 0.3125rem;
   box-sizing: border-box;
 }
+
+/* 中间css */
+.center-top {
+  width: 100%;
+  height: 20%;
+  /* background-color: #00d2ff; */
+}
+.center-bottom {
+  width: 100%;
+  height: 80%;
+  /* background-color: #ffffff; */
+}
+.center-top-item {
+  width: 30%;
+  height: 100%;
+  float: left;
+  margin-right: 0.625rem;
+}
+.center-top-item:last-child {
+  margin-right: 0;
+}
+.count {
+  width: 80%;
+  height: 80%;
+  margin: 0.625rem auto;
+  /* border: 1px solid rebeccapurple; */
+  box-sizing: border-box;
+}
+.count p {
+  color: #00d2ff;
+  font-size: 14px;
+
+  padding-bottom: 0.3125rem;
+  box-sizing: border-box;
+}
+.center-top-item-img {
+  width: 100%;
+  height: 40%;
+  background: url("../assets/image/count.png");
+  background-size: 100% 100%;
+  display: table;
+}
+.center-top-item-img p {
+  font-family: "楷体";
+  color: #feec00;
+  font-size: 28px;
+  text-align: center;
+  box-sizing: border-box;
+  display: table-cell;
+  vertical-align: middle;
+}
+/* 中间css */
 </style>
