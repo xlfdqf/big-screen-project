@@ -16,8 +16,10 @@
              <div class="left-top3 fl"><div class="left-top1-tit"><div class="left-top1-title" style="float:left; border-left: 0.3125rem solid #00d2ff;">当前特征WOE值</div></div><div class="bingEchart1"><bingEchart2 /></div></div>
            </div>
            <div class="left-bottom">
-             <div  class="left-bottom1">特征IV值分布</div>
-             <div  class="left-botto2"></div> 
+             <div  class="left-bottom1"><div  class="left-bottom1-tit">特征IV值分布</div></div>
+             <div  class="left-bottom2">
+               <zhexianEchart3 />
+             </div> 
            </div>
          </div>      
 			   <div class="right fl">
@@ -49,7 +51,6 @@
             </div>
          </div>     
        </div>
-			<!-- <div class="center fl">22</div> 机器人  -->
 	</div>
 </template>
 
@@ -62,6 +63,7 @@ import yibiaoEchart2 from "@/components/Home/yibiaoEchart2"; //仪表盘2组件
 import yibiaoEchart3 from "@/components/Home/yibiaoEchart3"; //仪表盘3组件
 import zhexianEchart1 from "@/components/Home/zhexianEchart1"; //折线图1组件
 import zhexianEchart2 from "@/components/Home/zhexianEchart2"; //折线图2组件
+import zhexianEchart3 from "@/components/Home/zhexianEchart3"; //折线图2组件
 import bingEchart1 from "@/components/Home/bingEchart1"; //饼图1组件
 import bingEchart2 from "@/components/Home/bingEchart2"; //饼图1组件
 export default {
@@ -74,6 +76,7 @@ export default {
     yibiaoEchart3,
     zhexianEchart1,
     zhexianEchart2,
+    zhexianEchart3,
     bingEchart1,
     bingEchart2
   },
@@ -132,7 +135,7 @@ export default {
 }
 .top-img {
   width: 100%;
-  height: 100%;
+  height: 70%;
   float: left;
 }
 .top-img-item {
@@ -171,7 +174,7 @@ export default {
   width: 40%;
   height: 100%;
   box-sizing: border-box;
-  padding-top: 2.5rem;
+  padding-top: 1.25rem;
 }
 .right-items {
   width: 95%;
@@ -185,7 +188,7 @@ export default {
   height: 29%;
   box-sizing: border-box;
   padding: 0 10px;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.25rem;
   background: url("../assets/image/kuang.png");
   background-size: 100% 100%;
   /* border: 1px solid #02c1d4; */
@@ -194,10 +197,10 @@ export default {
   margin-bottom: 0;
 }
 .right-item-tit {
-  border-left: #01d5e1 0.3125rem solid;
-  color: #02a6ce;
-  font-size: 1rem;
+  border-left: #00d2ff 0.3125rem solid;
+  color: #00d2ff;
   padding-left: 0.3125rem;
+  font-size: 20px;
 }
 .yibiaochart {
   width: 100%;
@@ -212,7 +215,7 @@ export default {
 .yibiaochart-item p {
   color: #00ffff;
   text-align: center;
-  font-size: 1rem;
+  font-size: 16px;
   height: 10%;
   width: 100%;
 }
@@ -221,6 +224,9 @@ export default {
 .left-top {
   width: 100%;
   height: 70%;
+  /* background: #ffffff; */
+  box-sizing: border-box;
+  /* padding: 1.25rem; */
 }
 .left-top1 {
   width: 33%;
@@ -240,7 +246,8 @@ export default {
 .people {
   width: 100%;
   height: 100%;
-  background: url("https://ow.speedbi.cn:7272/uploads/img/08:57:00:f6:b9:fe/7c8ba7d0-ebc6-11e9-8599-fd5d72c7833f.png");
+  /* background: url("https://ow.speedbi.cn:7272/uploads/img/08:57:00:f6:b9:fe/7c8ba7d0-ebc6-11e9-8599-fd5d72c7833f.png"); */
+  background: url("../assets/image/people.gif");
   background-size: 100% 100%;
 }
 /* left css end */
@@ -248,19 +255,19 @@ export default {
 /* 饼图 css */
 .left-top1-tit {
   width: 100%;
-  height: 30%;
+  height: 20%;
 }
 .left-top1-title {
   color: #00d2ff;
-  font-size: 1.25rem;
-
+  font-size: 20px;
   padding-right: 0.3125rem;
+  padding-left: 0.3125rem;
   box-sizing: border-box;
-  margin-top: 6.25rem;
+  margin-top: 2.5rem;
 }
 .bingEchart1 {
   width: 100%;
-  height: 70%;
+  height: 80%;
 }
 /* 饼图 css */
 
@@ -271,14 +278,23 @@ export default {
   background: url("../assets/image/quxianbg.png");
   background-size: 100% 100%;
   margin: 0 auto;
+  box-sizing: border-box;
+  padding-top: 1.25rem;
 }
 .left-bottom1 {
+  width: 100%;
+  height: 10%;
   color: #00d2ff;
-  border-left: 0.3125rem solid #00d2ff;
-  font-size: 1.25rem;
-  padding-left: 0.625rem;
+  font-size: 20px;
   box-sizing: border-box;
-  margin: 1.25rem 0;
+}
+.left-bottom1-tit {
+  border-left: 0.3125rem solid #00d2ff;
+  padding-left: 0.3125rem;
+}
+.left-bottom2 {
+  width: 100%;
+  height: 88%;
 }
 /* 曲线 css */
 </style>

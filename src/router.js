@@ -14,6 +14,14 @@ export default new Router({
       name: 'home',
       component: () => import('./views/Home.vue')
     }, {
+      path: '/home2',
+      name: 'home2',
+      component: () => import('./views/Home2.vue')
+    }, {
+      path: '/home3',
+      name: 'home3',
+      component: () => import('./views/Home3.vue')
+    }, {
       path: '/circleProgress',
       name: 'circleProgress',
       component: () => import('./views/CircleProgress.vue')
