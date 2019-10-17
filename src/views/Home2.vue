@@ -38,6 +38,9 @@
               <div class="right-items">
                   <div class="right-item-tit">昨日样本分布</div>
                   <div class="yibiaochart"> 
+                    <div class="yibiaochart-item"><huanEchart /></div>
+                    <div class="yibiaochart-item"><huanEchart1 /></div>
+                    <div class="yibiaochart-item"><huanEchart2 /></div>
                   </div>
               </div>
             </div>
@@ -45,6 +48,7 @@
               <div class="right-items">
                   <div class="right-item-tit">当前特征IV值</div>
                   <div class="yibiaochart"> 
+                    <bingEchart1/>
                   </div>
               </div>
             </div>
@@ -87,16 +91,24 @@
 <script>
 import echarts from "echarts";
 import nxCountUp from "@/components/nx-count-up";
+import huanEchart from "@/components/Home2/huanEchart"; //环形图1组件
+import huanEchart1 from "@/components/Home2/huanEchart1"; //环形图1组件
+import huanEchart2 from "@/components/Home2/huanEchart2"; //环形图1组件
 import zhexianEchart from "@/components/Home2/zhexianEchart"; //折线图1组件
 import zhuzhuangtuEchart1 from "@/components/Home2/zhuzhuangtuEchart1"; //柱状图1组件
 import zhuzhuangtuEchart2 from "@/components/Home2/zhuzhuangtuEchart2"; //柱状图2组件
+import bingEchart1 from "@/components/Home/bingEchart1"; //饼图1组件
 export default {
   name: "home2",
   components: {
     nxCountUp,
+    huanEchart,
+    huanEchart1,
+    huanEchart2,
     zhexianEchart,
     zhuzhuangtuEchart1,
-    zhuzhuangtuEchart2
+    zhuzhuangtuEchart2,
+    bingEchart1
   },
   data() {
     return {};
@@ -219,7 +231,7 @@ export default {
   height: 90%;
 }
 .yibiaochart-item {
-  height: 80%;
+  height: 100%;
   width: 33%;
   float: left;
   position: relative;

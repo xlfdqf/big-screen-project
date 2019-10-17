@@ -57,7 +57,7 @@
 <script>
 import echarts from "echarts";
 import nxCountUp from "@/components/nx-count-up";
-import huanEchart from "@/components/Home/huanEchart"; //环形图组件
+import huanEchart from "@/components/Home2/huanEchart"; //环形图组件
 import yibiaoEchart1 from "@/components/Home/yibiaoEchart1"; //仪表盘1组件
 import yibiaoEchart2 from "@/components/Home/yibiaoEchart2"; //仪表盘2组件
 import yibiaoEchart3 from "@/components/Home/yibiaoEchart3"; //仪表盘3组件
