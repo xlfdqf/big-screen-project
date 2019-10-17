@@ -24,4 +24,11 @@ export default {
     min-width: 1180px;
   }
 } */
+/* 进度条 */
+.el-progress-bar__outer {
+  background-color: #072f5c !important;
+}
+.el-progress-bar__inner {
+  background-color: #00c2f4 !important;
+}
 </style>

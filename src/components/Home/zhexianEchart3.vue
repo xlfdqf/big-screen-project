@@ -19,23 +19,6 @@ export default {
             }
           }
         },
-        legend: {
-          itemHeight: 12,
-          itemWidth: 12,
-          textStyle: {
-            color: "#ffffff" //字体颜色
-          },
-          data: [
-            {
-              name: "优质用户",
-              icon: "rect" //图例正方形
-            },
-            {
-              name: "劣质用户",
-              icon: "rect"
-            }
-          ]
-        },
         grid: {
           left: "3%",
           right: "4%",
@@ -54,7 +37,7 @@ export default {
                 color: "#ffffff" //x轴字体颜色
               }
             },
-            data: [1, 5, 10, 15, 20, 25]
+            data: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
           }
         ],
         yAxis: [
@@ -73,7 +56,7 @@ export default {
         ],
         series: [
           {
-            name: "优质用户",
+            name: "特征IV值",
             symbol: "none", //这句就是去掉点的
             smooth: true, //这句就是让曲线变平滑的
             type: "line",
@@ -91,23 +74,7 @@ export default {
                 color: "#00B3DD" //改变折线颜色
               }
             },
-            data: [0, 5, 34, 22, 23, 45]
-          },
-          {
-            name: "劣质用户",
-            symbol: "none", //这句就是去掉点的
-            smooth: true, //这句就是让曲线变平滑的
-            type: "line",
-            stack: "总量",
-            itemStyle: {
-              normal: {
-                color: "#FE9C00" //改变折线点的颜色
-              },
-              lineStyle: {
-                color: "#FE9C00" //改变折线颜色
-              }
-            },
-            data: [1, 11, 33, 44, 55, 23]
+            data: [0.1, 0.2, 0.3, 0.5, 1.2, 0.5, 0.3, 0.2, 0.1, 0]
           }
         ]
       }

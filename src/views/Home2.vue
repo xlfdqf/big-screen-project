@@ -10,7 +10,44 @@
       </div>
        <div class="bottom">
          <div class="left fl">
-           
+           <div class="right-item" style="margin-left:10px;">
+              <div class="right-items">
+                  <div class="right-item-tit">历史用户统计</div>
+                  <div class="yibiaochart"> 
+                    <div class="progress">
+                        <div class="progress-item">
+                          <span style="width:10%;height:10%;padding-left:0" class="fl">优质</span>
+                          <el-progress :text-inside="true" :stroke-width="24" :percentage="100" style="width:60%;height:80%;"  class="fl"></el-progress>
+                           <span style="width:30%;height:10%;" class="fl"><nx-count-up :start="1" :end="23500"/>人</span>
+                        </div>
+                        <div class="progress-item">
+                          <span style="width:10%;height:10%;padding-left:0" class="fl">可疑</span>
+                          <el-progress :text-inside="true" :stroke-width="22" :percentage="80" style="width:60%;height:80%;"  class="fl"></el-progress>
+                           <span style="width:30%;height:10%;" class="fl"><nx-count-up :start="1" :end="23500"/>人</span>
+                        </div>
+                        <div class="progress-item">
+                          <span style="width:10%;height:10%;padding-left:0" class="fl">劣质</span>
+                          <el-progress :text-inside="true" :stroke-width="20" :percentage="50" style="width:60%;height:80%;"  class="fl"></el-progress>
+                            <span style="width:30%;height:10%;" class="fl"><nx-count-up :start="1" :end="23500"/>人</span>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+             <div class="right-item" style="margin-left:10px;">
+              <div class="right-items">
+                  <div class="right-item-tit">昨日样本分布</div>
+                  <div class="yibiaochart"> 
+                  </div>
+              </div>
+            </div>
+             <div class="right-item" style="margin-left:10px;">
+              <div class="right-items">
+                  <div class="right-item-tit">当前特征IV值</div>
+                  <div class="yibiaochart"> 
+                  </div>
+              </div>
+            </div>
          </div>   
             <!-- 中间 -->
           <div class="center fl">
@@ -20,7 +57,7 @@
 			   <div class="right fl">
             <div class="right-item">
               <div class="right-items">
-                  <div class="right-item-tit">上个月用户统计</div>
+                  <div class="right-item-tit">上月用户统计</div>
                   <div class="yibiaochart"> 
                     <zhuzhuangtuEchart1 />
                   </div>
@@ -239,4 +276,27 @@ export default {
   margin: 1.25rem 0;
 }
 /* 曲线 css */
+
+/* 进度条  */
+.progress {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding-top: 0.625rem;
+}
+.progress p {
+  color: #00d2ff;
+  font-size: 18px;
+}
+.progress-item {
+  box-sizing: border-box;
+  width: 100%;
+  height: 30%;
+}
+.progress-item span {
+  color: #00d2ff;
+  font-size: 16px;
+  padding-left: 0.3125rem;
+  box-sizing: border-box;
+}
 </style>
