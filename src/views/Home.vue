@@ -104,6 +104,8 @@ export default {
   height: 100%;
   position: absolute;
   box-sizing: border-box;
+  background: url("../assets/image/people-bg.png");
+  background-size: 100% 100%;
 }
 .black {
   width: 100%;
@@ -160,7 +162,7 @@ export default {
   /* border: 1px solid red; */
 }
 .left {
-  width: 60%;
+  width: 65%;
   height: 100%;
   /* background-color: #3887aa; */
 }
@@ -171,7 +173,7 @@ export default {
   background-size: 100% 100%;
 } */
 .right {
-  width: 40%;
+  width: 35%;
   height: 100%;
   box-sizing: border-box;
   padding-top: 1.25rem;
@@ -229,17 +231,17 @@ export default {
   /* padding: 1.25rem; */
 }
 .left-top1 {
-  width: 33%;
+  width: 27.5%;
   height: 100%;
   /* background-color: #01d5e1; */
 }
 .left-top2 {
-  width: 33%;
+  width: 45%;
   height: 100%;
   /* background-color: red; */
 }
 .left-top3 {
-  width: 33%;
+  width: 27.5%;
   height: 100%;
   /* background-color: #fff; */
 }
@@ -247,7 +249,7 @@ export default {
   width: 100%;
   height: 100%;
   /* background: url("https://ow.speedbi.cn:7272/uploads/img/08:57:00:f6:b9:fe/7c8ba7d0-ebc6-11e9-8599-fd5d72c7833f.png"); */
-  background: url("../assets/image/people.gif");
+  background: url("../assets/image/person.gif");
   /* background: url("../assets/image/people2.png"); */
   background-size: 100% 100%;
 }
