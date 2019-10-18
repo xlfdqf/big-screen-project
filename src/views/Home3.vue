@@ -29,9 +29,25 @@
                      <p><nx-count-up :start="1" :end="1023"/></p></div>
                   </div>
               </div>
-              <div class="left-top2"></div>
+              <div class="left-top2">
+                <mapEchart />
+              </div>
            </div>
-            <div class="left-bottom"></div>
+            <div class="left-bottom">
+              <div class="right-item-tit" >昨日样本分布</div>
+                 <div class="yibiaochart" style="width:100%;height:90%;"> 
+                    <div class="yibiaochart-item">
+                      
+                      <!-- <p>历史阈值平均数</p> -->
+                    </div>
+                    <div class="yibiaochart-item">
+                      
+                    </div>
+                    <div class="yibiaochart-item">
+                      
+                    </div>
+                  </div>
+            </div>
          </div>   
          <!-- 右边 -->
 			   <div class="right fl">
@@ -227,22 +243,30 @@ export default {
   /* background-color: #3887aa; */
 }
 .left-top1 {
-  width: 20%;
+  width: 22%;
   height: 100%;
   /* background-color: #00d2ff; */
   float: left;
 }
 .left-top2 {
-  width: 80%;
+  width: 78%;
   height: 100%;
   float: left;
   /* background-color: #ffffff; */
 }
 .left-bottom {
-  width: 100%;
-  height: 30%;
+  width: 50%;
+  height: 28%;
   box-sizing: border-box;
-  /* background-color: #ffffff; */
+  padding: 0.625rem 1.25rem;
+  background: url("../assets/image/kuang.png");
+  background-size: 100% 100%;
+  margin-left: 1.25rem;
+}
+.left-bottom-list {
+  /* border: 1px solid #002dff; */
+  width: 100%;
+  height: 80%;
 }
 .people {
   width: 100%;
@@ -336,7 +360,7 @@ export default {
 .count p {
   color: #00d2ff;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 18px;
   padding-bottom: 0.3125rem;
   box-sizing: border-box;
 }
@@ -350,7 +374,7 @@ export default {
 .center-top-item-img p {
   font-family: "楷体";
   color: #feec00;
-  font-size: 28px;
+  font-size: 36px;
   text-align: center;
   box-sizing: border-box;
   display: table-cell;
