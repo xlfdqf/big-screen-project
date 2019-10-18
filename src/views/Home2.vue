@@ -17,18 +17,18 @@
                     <div class="progress">
                         <div class="progress-item">
                           <span style="width:10%;height:10%;padding-left:0" class="fl">优质</span>
-                          <el-progress :text-inside="true" :stroke-width="24" :percentage="100" style="width:60%;height:80%;"  class="fl"></el-progress>
-                           <span style="width:30%;height:10%;" class="fl"><nx-count-up :start="1" :end="23500"/>人</span>
+                          <el-progress :text-inside="true" :stroke-width="24" :percentage="5" style="width:60%;height:80%;"  class="fl"></el-progress>
+                           <span style="width:30%;height:10%;" class="fl"><nx-count-up :start="1" :end="55"/>人</span>
                         </div>
                         <div class="progress-item">
                           <span style="width:10%;height:10%;padding-left:0" class="fl">可疑</span>
-                          <el-progress :text-inside="true" :stroke-width="22" :percentage="80" style="width:60%;height:80%;"  class="fl"></el-progress>
-                           <span style="width:30%;height:10%;" class="fl"><nx-count-up :start="1" :end="23500"/>人</span>
+                          <el-progress :text-inside="true" :stroke-width="22" :percentage="30" style="width:60%;height:80%;"  class="fl"></el-progress>
+                           <span style="width:30%;height:10%;" class="fl"><nx-count-up :start="30" :end="308"/>人</span>
                         </div>
                         <div class="progress-item">
                           <span style="width:10%;height:10%;padding-left:0" class="fl">劣质</span>
-                          <el-progress :text-inside="true" :stroke-width="20" :percentage="50" style="width:60%;height:80%;"  class="fl"></el-progress>
-                            <span style="width:30%;height:10%;" class="fl"><nx-count-up :start="1" :end="23500"/>人</span>
+                          <el-progress :text-inside="true" :stroke-width="20" :percentage="90" style="width:60%;height:80%;"  class="fl"></el-progress>
+                            <span style="width:30%;height:10%;" class="fl"><nx-count-up :start="1" :end="952"/>人</span>
                         </div>
                     </div>
                   </div>
@@ -58,25 +58,27 @@
             <div class="center-top">
               <div class="center-top-item">
                 <div class="count">
-                  <p>浙江借款总人数</p>
+                  <p class="count-tit">浙江借款总人数</p>
                   <div class="center-top-item-img">
-                     <p><nx-count-up :start="1" :end="28747"/></p>
+                     <p class="count-css"><span>0</span><span>0</span><span>1</span><span>0</span><span>2</span></p>
                   </div>
                 </div>
               </div>
                <div class="center-top-item"> 
                  <div class="count">
-                  <p>浙江上月借款人数</p>
+                  <p  class="count-tit">浙江上月借款人数</p>
                   <div class="center-top-item-img">
-                     <p><nx-count-up :start="1" :end="12541"/></p>
+                     <!-- <p><nx-count-up :start="1" :end="12541"/></p> -->
+                      <p class="count-css"><span>0</span><span>0</span><span>0</span><span>8</span><span>5</span></p>
                   </div>
                   </div>
                 </div>
                 <div class="center-top-item">
                    <div class="count">
-                  <p>浙江昨天借款人数</p>
+                  <p class="count-tit">浙江昨天借款人数</p>
                   <div class="center-top-item-img">
-                     <p><nx-count-up :start="1" :end="1023"/></p>
+                     <!-- <p><nx-count-up :start="1" :end="1023"/></p> -->
+                      <p class="count-css"><span>0</span><span>0</span><span>0</span><span>3</span><span>6</span></p>
                   </div>
                   </div></div>
             </div>
@@ -369,11 +371,10 @@ export default {
   /* border: 1px solid rebeccapurple; */
   box-sizing: border-box;
 }
-.count p {
+.count .count-tit {
   color: #00d2ff;
   font-weight: bold;
   font-size: 14px;
-
   padding-bottom: 0.3125rem;
   box-sizing: border-box;
 }
@@ -382,7 +383,8 @@ export default {
   height: 40%;
   background: url("../assets/image/count.png");
   background-size: 100% 100%;
-  display: table;
+  position: relative;
+  /* display: table; */
 }
 .center-top-item-img p {
   font-family: "楷体";
@@ -390,8 +392,23 @@ export default {
   font-size: 28px;
   text-align: center;
   box-sizing: border-box;
-  display: table-cell;
-  vertical-align: middle;
+  /* display: table-cell;
+  vertical-align: middle; */
 }
 /* 中间css */
+
+/* 数字效果 */
+.count-css {
+  position: relative;
+  top: 10px;
+}
+.count-css span {
+  background-color: #1f304f;
+  box-sizing: border-box;
+  padding: 2px 5px;
+  margin: 2px 5px;
+}
+.count-css span:last-child {
+  margin-right: 0;
+}
 </style>
