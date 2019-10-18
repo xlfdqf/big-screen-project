@@ -5,7 +5,7 @@
          <div class="top-content">
            <p class="top-title">智慧金融太空舱数据大屏</p>
            <div class="top-img"><div class="top-img-item"></div></div>
-           <div class="top-date"><span style="color:#00D2FF;">2019&nbsp;</span>年<span style="color:#00D2FF;">&nbsp;10</span>&nbsp;月</div>
+           <div class="top-date"><span style="color:#00D2FF;">2019&nbsp;</span>年<span style="color:#00D2FF;">&nbsp;11</span>&nbsp;月</div>
          </div>
       </div>
        <div class="bottom">
@@ -209,10 +209,12 @@ export default {
   height: 90%;
 }
 .yibiaochart-item {
-  height: 80%;
+  height: 90%;
   width: 33%;
   float: left;
   position: relative;
+  box-sizing: border-box;
+  margin-top: 0.625rem;
 }
 .yibiaochart-item p {
   color: #00ffff;
@@ -220,6 +222,8 @@ export default {
   font-size: 16px;
   height: 10%;
   width: 100%;
+  position: absolute;
+  bottom: 0.9375rem;
 }
 
 /* left css */

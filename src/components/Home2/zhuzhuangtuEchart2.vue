@@ -25,6 +25,12 @@ export default {
           data: ["优质", "可疑", "劣质"]
         },
         calculable: true,
+        grid: {
+          left: "3%",
+          right: "4%",
+          bottom: "3%",
+          containLabel: true
+        },
         xAxis: [
           {
             type: "category",
@@ -45,8 +51,11 @@ export default {
               color: "#ffffff" //文字样式
             },
             splitLine: {
-              //去掉网格线
-              show: false
+              lineStyle: {
+                color: ["#02688A"],
+                width: 1,
+                type: "sold"
+              }
             },
             axisLabel: {
               textStyle: {

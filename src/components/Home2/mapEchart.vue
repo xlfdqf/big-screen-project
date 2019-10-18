@@ -35,16 +35,18 @@ export default {
     });
     chinaMap.setOption({
       //   backgroundColor: "#272D3A",
-      // 标题
-      title: {
-        left: "center",
-        textStyle: {
-          color: "#fff"
-        }
+      grid: {
+        left: 0,
+        top: 0,
+        left: 0,
+        bottom: 0,
+        containLabel: true
       },
       // 地理坐标系组件
       geo: {
         map: "china",
+        // layoutCenter: ["100%", "100%"],
+        layoutSize: "100%",
         label: {
           // true会显示城市名
           emphasis: {
@@ -102,7 +104,7 @@ export default {
           coordinateSystem: "geo",
           data: [],
           // 标记的大小
-          symbolSize: 12,
+          symbolSize: 16,
           showEffectOn: "render",
           rippleEffect: {
             brushType: "stroke"
@@ -116,7 +118,7 @@ export default {
           itemStyle: {
             normal: {
               color: "#f4e925",
-              shadowBlur: 10,
+              shadowBlur: 15,
               shadowColor: "#333"
             }
           },

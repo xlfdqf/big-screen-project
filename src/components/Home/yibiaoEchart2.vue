@@ -22,6 +22,12 @@ export default {
             splitNumber: 6, //设置间隔区域的显示数量
             startAngle: 180, //开始角度 左侧角度
             endAngle: 0, //结束角度 右侧
+            grid: {
+              left: "3%",
+              right: "4%",
+              bottom: "3%",
+              containLabel: true
+            },
             axisLine: {
               // 坐标轴线
               lineStyle: {

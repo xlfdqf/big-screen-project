@@ -11,6 +11,13 @@ export default {
   data() {
     return {
       option: {
+        grid: {
+          left: "3%",
+          top: "3%",
+          right: "4%",
+          bottom: "3%",
+          containLabel: true
+        },
         color: ["#E56E6E", "#2853EC", "#FEB763", "#00C0DD"],
         tooltip: {
           trigger: "item",

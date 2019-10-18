@@ -24,6 +24,13 @@ export default {
         emphasis: {
           show: false
         },
+        grid: {
+          left: 0,
+          top: 0,
+          left: 0,
+          bottom: 0,
+          containLabel: true
+        },
         graphic: {
           //图形中间文字
           type: "text",

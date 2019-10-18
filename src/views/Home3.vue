@@ -5,7 +5,7 @@
          <div class="top-content">
            <p class="top-title">智慧金融太空舱数据大屏</p>
            <div class="top-img"><div class="top-img-item"></div></div>
-           <div class="top-date"><span style="color:#00D2FF;">2019&nbsp;</span>年<span style="color:#00D2FF;">&nbsp;10</span>&nbsp;月</div>
+           <div class="top-date"><span style="color:#00D2FF;">2019&nbsp;</span>年<span style="color:#00D2FF;">&nbsp;11</span>&nbsp;月</div>
          </div>
       </div>
        <div class="bottom">

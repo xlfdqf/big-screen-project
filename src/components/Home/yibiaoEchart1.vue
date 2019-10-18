@@ -22,6 +22,12 @@ export default {
             splitNumber: 6, //设置间隔区域的显示数量
             startAngle: 180, //开始角度 左侧角度
             endAngle: 0, //结束角度 右侧
+            grid: {
+              left: "3%",
+              right: "4%",
+              bottom: "3%",
+              containLabel: true
+            },
             axisLine: {
               // 坐标轴线
               lineStyle: {
@@ -62,7 +68,7 @@ export default {
                 opacity: 1, //图形透明度。支持从 0 到 1 的数字，为 0 时不绘制该图形。
                 width: 2, //线度,默认 2。
                 type: "solid", //线的类型,默认 solid。 此外还有 dashed,dotted
-                shadowBlur: 10, //(发光效果)图形阴影的模糊大小。该属性配合 shadowColor,shadowOffsetX, shadowOffsetY 一起设置图形的阴影效果。
+                shadowBlur: 5, //(发光效果)图形阴影的模糊大小。该属性配合 shadowColor,shadowOffsetX, shadowOffsetY 一起设置图形的阴影效果。
                 shadowColor: "#fff" //阴影颜色。支持的格式同color。
               }
             },

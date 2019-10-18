@@ -60,8 +60,11 @@ export default {
         yAxis: [
           {
             splitLine: {
-              //去掉网格线
-              show: false
+              lineStyle: {
+                color: ["#02688A"],
+                width: 1,
+                type: "sold"
+              }
             },
             type: "value",
             axisLabel: {
