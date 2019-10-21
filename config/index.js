@@ -10,20 +10,20 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    // proxyTable: {
-    //   '/api': {
-    //     target: ' http://10.10.1.140:8245',
-    //     // secure: false, // 如果是https接口，需要配置这个参数
-    //     changeOrigin: true,
-    //     pathRewrite: {
-    //       '^/api': ''
-    //     }
-    //   }
-    // },
+    proxyTable: {
+      // '/api': {
+      //   target: 'http://10.10.2.8:8080',
+      //   // secure: false, // 如果是https接口，需要配置这个参数
+      //   changeOrigin: true,
+      //   pathRewrite: {
+      //     '^/api': ''
+      //   }
+      // }
+    },
 
     // Various Dev Server settings
-    host: '0.0.0.0',
-    // host: 'localhost', // can be overwritten by process.env.HOST
+    // host: '0.0.0.0',
+    host: 'localhost', // can be overwritten by process.env.HOST
     port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,

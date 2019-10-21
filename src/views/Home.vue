@@ -27,9 +27,9 @@
               <div class="right-items">
                   <div class="right-item-tit">历史用户统计</div>
                   <div class="yibiaochart"> 
-                    <div class="yibiaochart-item"><yibiaoEchart1 /><p>总特征：1200</p></div>
-                    <div class="yibiaochart-item"><yibiaoEchart2 /><p>模型特征：250</p></div>
-                    <div class="yibiaochart-item"><yibiaoEchart3 /><p>相似度比对：20</p></div>
+                    <div class="yibiaochart-item"><yibiaoEchart1 /><p>总特征：479</p></div>
+                    <div class="yibiaochart-item"><yibiaoEchart2 /><p>模型特征：29</p></div>
+                    <div class="yibiaochart-item"><yibiaoEchart3 /><p>相似度比对：9</p></div>
                   </div>
               </div>
             </div>
@@ -66,6 +66,7 @@ import zhexianEchart2 from "@/components/Home/zhexianEchart2"; //折线图2组�
 import zhexianEchart3 from "@/components/Home/zhexianEchart3"; //折线图2组件
 import bingEchart1 from "@/components/Home/bingEchart1"; //饼图1组件
 import bingEchart2 from "@/components/Home/bingEchart2"; //饼图1组件
+import { getHome1 } from "../utils/api.js";
 export default {
   name: "home",
   components: {
@@ -81,8 +82,95 @@ export default {
     bingEchart2
   },
   data() {
-    return {};
+    return {
+      list: {
+        code: 0,
+        msg: "success",
+        data: {
+          total: 479,
+          compare: 9,
+          model: 29,
+          woe: [
+            {
+              feature_name: "近六个月通话时长TOP3呼出时间",
+              iv: 0.0,
+              bucket: null,
+              sum_of_iv: 1.16670417,
+              sum_of_woe: 3.98769814,
+              status: null,
+              feature_field: "top3_call_len_call_out_len"
+            },
+            {
+              feature_name: "查询过该用户的相关企业数量",
+              iv: 0.0,
+              bucket: null,
+              sum_of_iv: 1.10703153,
+              sum_of_woe: 4.55696357,
+              status: null,
+              feature_field: "searched_org_cnt"
+            },
+            {
+              feature_name: "近六个月通话时长TOP3呼出次数",
+              iv: 0.0,
+              bucket: null,
+              sum_of_iv: 1.10319817,
+              sum_of_woe: 3.37451148,
+              status: null,
+              feature_field: "top3_call_len_call_out_cnt"
+            },
+            {
+              feature_name: "近6个月月均主叫时间",
+              iv: 0.0,
+              bucket: null,
+              sum_of_iv: 1.0870232,
+              sum_of_woe: 1.26912599,
+              status: null,
+              feature_field: "recent_6m_avg_call_out_time"
+            }
+          ],
+          iv: [
+            {
+              feature_name: "近六个月通话时长TOP3呼出时间",
+              iv: 0.0,
+              bucket: null,
+              sum_of_iv: 1.16670417,
+              sum_of_woe: 3.98769814,
+              status: null,
+              feature_field: "top3_call_len_call_out_len"
+            },
+            {
+              feature_name: "查询过该用户的相关企业数量",
+              iv: 0.0,
+              bucket: null,
+              sum_of_iv: 1.10703153,
+              sum_of_woe: 4.55696357,
+              status: null,
+              feature_field: "searched_org_cnt"
+            },
+            {
+              feature_name: "近六个月通话时长TOP3呼出次数",
+              iv: 0.0,
+              bucket: null,
+              sum_of_iv: 1.10319817,
+              sum_of_woe: 3.37451148,
+              status: null,
+              feature_field: "top3_call_len_call_out_cnt"
+            },
+            {
+              feature_name: "近6个月月均主叫时间",
+              iv: 0.0,
+              bucket: null,
+              sum_of_iv: 1.0870232,
+              sum_of_woe: 1.26912599,
+              status: null,
+              feature_field: "recent_6m_avg_call_out_time"
+            }
+          ]
+        }
+      }
+    };
   },
+  created() {},
   mounted() {
     let bingEchart1 = echarts.init(document.querySelector(".bingEchart1"));
     bingEchart1.setOption(this.option);

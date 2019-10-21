@@ -29,7 +29,12 @@ export default {
           textStyle: {
             color: "#fff"
           },
-          data: ["月份", "年龄", "多头借贷", "逾期"]
+          data: [
+            "近六个月通话时长TOP3呼出时间",
+            "近六个月通话时长TOP3呼出次数",
+            "近6个月月均主叫时间",
+            "查询过该用户的相关企业数量"
+          ]
         },
         calculable: true,
         series: [
@@ -56,10 +61,10 @@ export default {
               }
             },
             data: [
-              { value: 0.58, name: "月份" },
-              { value: 0.3, name: "年龄" },
-              { value: 0.12, name: "多头借贷" },
-              { value: 0.45, name: "逾期" }
+              { value: 1.16670417, name: "近六个月通话时长TOP3呼出时间" },
+              { value: 1.10319817, name: "近六个月通话时长TOP3呼出次数" },
+              { value: 1.0870232, name: "近6个月月均主叫时间" },
+              { value: 1.10703153, name: "查询过该用户的相关企业数量" }
             ]
           }
         ]

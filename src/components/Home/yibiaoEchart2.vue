@@ -71,7 +71,7 @@ export default {
                 shadowColor: "#fff" //阴影颜色。支持的格式同color。
               }
             },
-            data: [{ value: 250 }]
+            data: [{ value: 29 }]
           }
         ]
       }

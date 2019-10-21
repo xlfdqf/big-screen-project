@@ -1,17 +1,16 @@
 import { get, post } from './request'
 import QS from 'qs';
-// let baseUrl = 'http://api.bzhuan888.com'; //线上
-let baseUrl = 'http://qo.bzhuan888.com';  // 测试
+const api = process.env.NODE_ENV == "development" ? 'api' : '';
 //登录
 export function getLogin(params) {
-    return post(`${baseUrl}/business/login`, params);
+    return post(`${api}/business/login`, params);
 }
 // 新闻列表
 export function getNewsList(params) {
-    return post(`${baseUrl}/web/listNews`, params);
+    return post(`${api}/web/listNews`, params);
 }
 
 //新闻详情
 export function showNewBeforeModify(params) {
-    return get(`${baseUrl}/web/showNewBeforeModify`, params);
+    return get(`${api}/web/showNewBeforeModify`, params);
 }
