@@ -40,19 +40,19 @@
                         <div class="wave">
                           <p style="text-align:center">ROC面积<br/>0.58</p> 
                         </div>
-                        <p class="wave-text">历史阈值平均数</p>
+                        <!-- <p class="wave-text">历史阈值平均数</p> -->
                     </div>
                     <div class="shuiuibochart-item" style="border:3px #1DC5CF solid;">
                        <div class="wave2" style="background-color:#1DC5CF;">
                           <p style="text-align:center">阈值<br/>152</p> 
                        </div>
-                        <p class="wave-text">历史ROC面积平均数</p>
+                        <!-- <p class="wave-text">历史ROC面积平均数</p> -->
                     </div>
                     <div class="shuiuibochart-item" style="border:3px #0182D3 solid;">
                        <div class="wave3" style="background-color:#0182D3;">
                           <p style="text-align:center">历史<br/>123</p> 
                        </div>
-                        <p class="wave-text">历史平均平均数</p>
+                        <!-- <p class="wave-text">历史平均平均数</p> -->
                     </div>
                   </div>
             </div>
@@ -241,21 +241,16 @@ export default {
   width: 33%;
   float: left;
 }
-/* 水波纹css */
+/* 水波纹css container*/
 .shuiuibochart-item {
-  /* flex: 1; */
-  margin: 0 auto;
-  height: 80%;
-  width: 27%;
-  /* padding: 5px; */
-  border: 3px solid #00d2ff;
-  /* transform: translate(-50%, -50%); */
+  width: 30%;
+  height: 90%;
+  padding: 10px;
+  border: 5px solid rgb(118, 218, 255);
   border-radius: 50%;
   overflow: hidden;
-  margin-right: 0.3125rem;
   box-sizing: border-box;
-  position: relative;
-  font-size: 12px;
+  margin-right: 0.3125rem;
 }
 .wave-text {
   color: #00d2ff;
@@ -264,17 +259,17 @@ export default {
   margin-right: 0;
 }
 /* 水波纹效果 */
-.container {
+/* .container {
   margin: 0 auto;
-  width: 100px;
-  height: 100px;
+  width: 30%;
+  height: 90%;
   padding: 5px;
   border: 5px solid #34abff;
   top: 100px;
   left: 100px;
   border-radius: 50%;
   overflow: hidden;
-}
+} */
 .wave {
   position: relative;
   left: -4px;
@@ -303,10 +298,10 @@ export default {
   position: absolute;
   width: 140%;
   height: 140%;
-  top: 40%;
+  top: 50%;
   left: 50%;
   /* 浅色 */
-  background-color: #026b99;
+  /* background-color: #026b99; */
   border-radius: 45%;
   transform: translate(-50%, -70%) rotate(0);
   animation: rotate 4s linear infinite;
@@ -328,7 +323,7 @@ export default {
   top: 25%;
   left: 50%;
   /* 浅色 */
-  background-color: #026b99;
+  /* background-color: #026b99; */
   border-radius: 45%;
   transform: translate(-50%, -70%) rotate(0);
   animation: rotate 4s linear infinite;
@@ -347,10 +342,10 @@ export default {
   position: absolute;
   width: 140%;
   height: 140%;
-  top: 33%;
+  top: 35%;
   left: 50%;
   /* 浅色 */
-  background-color: #026b99;
+  /* background-color: #026b99; */
   border-radius: 45%;
   transform: translate(-50%, -70%) rotate(0);
   animation: rotate 4s linear infinite;

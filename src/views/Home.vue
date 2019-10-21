@@ -135,6 +135,7 @@ export default {
   box-sizing: border-box;
   font-size: 35px;
 }
+
 .top-img {
   width: 100%;
   height: 70%;
@@ -304,4 +305,10 @@ export default {
   height: 88%;
 }
 /* 曲线 css */
+/* 媒体查询 2048 */
+/* @media screen and (min-width: 1920px) {
+  .top-title {
+    color: red;
+  }
+} */
 </style>
