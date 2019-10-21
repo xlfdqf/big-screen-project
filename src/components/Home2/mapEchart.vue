@@ -92,7 +92,7 @@ export default {
             // 鼠标悬浮的时候圆点样式变化
             emphasis: {
               borderColor: "#fff",
-              borderWidth: 1
+              borderWidth: 2
             }
           }
         },
@@ -104,7 +104,7 @@ export default {
           coordinateSystem: "geo",
           data: [],
           // 标记的大小
-          symbolSize: 16,
+          symbolSize: 24,
           showEffectOn: "render",
           rippleEffect: {
             brushType: "stroke"

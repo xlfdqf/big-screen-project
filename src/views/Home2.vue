@@ -18,17 +18,17 @@
                         <div class="progress-item">
                           <span style="width:10%;height:10%;padding-left:0" class="fl">优质</span>
                           <el-progress :text-inside="true" :stroke-width="24" :percentage="5" style="width:60%;height:80%;"  class="fl"></el-progress>
-                           <span style="width:30%;height:10%;" class="fl"><nx-count-up :start="1" :end="55"/>人</span>
+                           <span style="width:30%;height:10%;font-weight:bold;" class="fl"><nx-count-up :start="1" :end="55"/>人</span>
                         </div>
                         <div class="progress-item">
                           <span style="width:10%;height:10%;padding-left:0" class="fl">可疑</span>
                           <el-progress :text-inside="true" :stroke-width="22" :percentage="30" style="width:60%;height:80%;"  class="fl"></el-progress>
-                           <span style="width:30%;height:10%;" class="fl"><nx-count-up :start="30" :end="308"/>人</span>
+                           <span style="width:30%;height:10%;font-weight:bold;" class="fl"><nx-count-up :start="30" :end="308"/>人</span>
                         </div>
                         <div class="progress-item">
                           <span style="width:10%;height:10%;padding-left:0" class="fl">劣质</span>
                           <el-progress :text-inside="true" :stroke-width="20" :percentage="90" style="width:60%;height:80%;"  class="fl"></el-progress>
-                            <span style="width:30%;height:10%;" class="fl"><nx-count-up :start="1" :end="952"/>人</span>
+                            <span style="width:30%;height:10%;font-weight:bold;" class="fl"><nx-count-up :start="1" :end="952"/>人</span>
                         </div>
                     </div>
                   </div>
@@ -191,14 +191,6 @@ export default {
 
 <style scoped>
 /* 滚动效果 */
-/* .menu-list {
-  list-style: none;
-  width: 25px;
-  box-sizing: border-box;
-}
-.menu-list li {
-  display: block;
-} */
 .list {
   list-style: none;
   width: 25px;

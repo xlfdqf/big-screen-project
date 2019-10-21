@@ -16,17 +16,62 @@
                  <div class="count">
                     <p>浙江借款平均分</p>
                     <div class="center-top-item-img">
-                     <p><nx-count-up :start="1" :end="28747"/></p></div>
+                     <!-- <p><nx-count-up :start="1" :end="28747"/></p> -->
+                       <p class="count-css"><span>0</span><span>1</span><span>0</span><span>2</span>
+                      <ul class="list">
+                        <li class="one">0</li>
+                        <li class="two">1</li>
+                        <li class="three">6</li>
+                        <li class="four">4</li>
+                        <li class="one">8</li>
+                        <li class="two">7</li>
+                        <li class="three">5</li>
+                        <li class="four">7</li>
+                         <li class="four">8</li>
+                        <li class="four">9</li>
+                        </ul>
+                     </p>
+                     </div>
                   </div>
                  <div class="count">
                     <p>浙江上月借款人数平均分</p>
                     <div class="center-top-item-img">
-                     <p><nx-count-up :start="1" :end="12541"/></p></div>
+                     <!-- <p><nx-count-up :start="1" :end="12541"/></p> -->
+                         <p class="count-css"><span>0</span><span>0</span><span>8</span><span>5</span>
+                       <ul class="list">
+                        <li class="one">0</li>
+                        <li class="two">3</li>
+                        <li class="three">8</li>
+                        <li class="four">6</li>
+                        <li class="one">5</li>
+                        <li class="two">1</li>
+                        <li class="three">4</li>
+                        <li class="four">7</li>
+                         <li class="four">3</li>
+                        <li class="four">4</li>
+                        </ul>
+                      </p>
+                     </div>
                  </div>
                   <div class="count">
                      <p>浙江历史记录借款人平均分</p>
                     <div class="center-top-item-img">
-                     <p><nx-count-up :start="1" :end="1023"/></p></div>
+                     <!-- <p><nx-count-up :start="1" :end="1023"/></p> -->
+                     <p class="count-css"><span>0</span><span>0</span><span>3</span><span>6</span>
+                       <ul class="list">
+                        <li class="one">0</li>
+                        <li class="two">2</li>
+                        <li class="three">7</li>
+                        <li class="four">4</li>
+                        <li class="one">8</li>
+                        <li class="two">5</li>
+                        <li class="three">3</li>
+                        <li class="four">7</li>
+                         <li class="four">5</li>
+                        <li class="four">4</li>
+                        </ul>
+                      </p>
+                     </div>
                   </div>
               </div>
               <div class="left-top2">
@@ -125,6 +170,66 @@ export default {
 </script>
 
 <style scoped>
+/* 数字效果 */
+.count-css {
+  width: 80%;
+  /* border: 1px solid red; */
+  margin: 0 auto;
+  position: relative;
+  top: 5px;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+.count-css span {
+  background-color: #1f304f;
+  box-sizing: border-box;
+  padding: 2px 6px;
+  margin: 2px 5px;
+}
+.count-css span:last-child {
+  margin-right: 0;
+}
+/* 滚动效果 */
+.list {
+  list-style: none;
+  width: 30px;
+  height: 40px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 11px;
+  right: 25px;
+  background: #1f304f;
+}
+.list li {
+  position: relative;
+  animation: myfirst 10s infinite;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 36px;
+  color: #feec00;
+}
+@keyframes myfirst {
+  0% {
+    top: 0px;
+    background: #1f304f;
+  }
+  25% {
+    top: 0px;
+  }
+  50% {
+    top: -60px;
+  }
+  75% {
+    top: -120px;
+  }
+  100% {
+    top: -180px;
+  }
+}
+/* 滚动效果 */
 .fl {
   float: left;
 }
@@ -250,7 +355,8 @@ export default {
   border-radius: 50%;
   overflow: hidden;
   box-sizing: border-box;
-  margin-right: 0.3125rem;
+  /* margin-right: 0.3125rem; */
+  margin-right: 20px;
 }
 .wave-text {
   color: #00d2ff;
@@ -542,7 +648,7 @@ export default {
   font-family: "楷体";
   color: #feec00;
   font-size: 36px;
-  text-align: center;
+  /* text-align: center; */
   box-sizing: border-box;
   display: table-cell;
   vertical-align: middle;
