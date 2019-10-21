@@ -106,6 +106,11 @@ export default {
             smooth: true, //这句就是让曲线变平滑的
             type: "line",
             stack: "总量",
+            areaStyle: {
+              normal: {
+                color: "#FE9C00" //改变区域颜色
+              }
+            },
             itemStyle: {
               normal: {
                 color: "#FE9C00" //改变折线点的颜色

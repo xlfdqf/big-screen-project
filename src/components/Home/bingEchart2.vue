@@ -40,6 +40,22 @@ export default {
             type: "pie",
             radius: [30, 110],
             roseType: "area",
+            label: {
+              normal: {
+                formatter(v) {
+                  let text = v.name;
+                  return text.length < 3
+                    ? text
+                    : `${text.slice(0, 3)}\n${text.slice(3, 6)}\n${text.slice(
+                        6,
+                        9
+                      )}\n${text.slice(9, 12)}\n${text.slice(
+                        12,
+                        15
+                      )}\n${text.slice(15, 18)}`;
+                }
+              }
+            },
             // 修改字体颜色的代码begin
             itemStyle: {
               normal: {

@@ -5,7 +5,7 @@
          <div class="top-content">
            <p class="top-title">智慧金融太空舱数据大屏</p>
            <div class="top-img"><div class="top-img-item"></div></div>
-           <div class="top-date"><span style="color:#00D2FF;">2019&nbsp;</span>年<span style="color:#00D2FF;">&nbsp;11</span>&nbsp;月</div>
+           <div class="top-date" style="font-family:'楷体'"><span style="color:#00D2FF;">2019&nbsp;</span>年<span style="color:#00D2FF;">&nbsp;11</span>&nbsp;月</div>
          </div>
       </div>
        <div class="bottom">
@@ -352,7 +352,7 @@ export default {
 /* 水波纹css container*/
 .shuiuibochart-item1 {
   width: 30%;
-  height: 90%;
+  height: 85%;
   border: 3px solid #00d2ff;
   border-radius: 50%;
   overflow: hidden;
@@ -385,7 +385,7 @@ export default {
 }
 .shuiuibochart-item2 {
   width: 30%;
-  height: 90%;
+  height: 85%;
   border: 3px solid #1dc5cf;
   border-radius: 50%;
   overflow: hidden;
@@ -416,7 +416,7 @@ export default {
 }
 .shuiuibochart-item3 {
   width: 30%;
-  height: 90%;
+  height: 85%;
   border: 3px solid #0181d1;
   border-radius: 50%;
   overflow: hidden;

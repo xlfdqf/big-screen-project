@@ -28,11 +28,21 @@ export default {
               bottom: "3%",
               containLabel: true
             },
+            title: {
+              //设置仪表盘中间显示文字样式
+              textStyle: {
+                // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                fontWeight: "bolder",
+                fontSize: 10,
+                fontStyle: "italic",
+                color: "white"
+              }
+            },
             axisLine: {
               // 坐标轴线
               lineStyle: {
                 shadowBlur: 10, //(发光效果)图形阴影的模糊大小。该属性配合 shadowColor,shadowOffsetX, shadowOffsetY 一起设置图形的阴影效果。
-                shadowColor: "#fff", //阴影颜色。支持的格式同color。
+                shadowColor: "#ffffff", //阴影颜色。支持的格式同color。
                 width: 15, //表盘宽度
                 color: [
                   [

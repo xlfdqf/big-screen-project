@@ -98,7 +98,7 @@ export default {
                 color: "#00B3DD" //改变折线颜色
               }
             },
-            data: [0, 5, 34, 22, 23, 45]
+            data: [0, 0.43, 0.87, 0.11, 1.2]
           },
           {
             name: "劣质用户",
@@ -106,6 +106,11 @@ export default {
             smooth: true, //这句就是让曲线变平滑的
             type: "line",
             stack: "总量",
+            areaStyle: {
+              normal: {
+                color: "#FE9C00" //改变区域颜色
+              }
+            },
             itemStyle: {
               normal: {
                 color: "#FE9C00" //改变折线点的颜色
@@ -114,7 +119,7 @@ export default {
                 color: "#FE9C00" //改变折线颜色
               }
             },
-            data: [0.23, 0.4, 0.78, 0.91, 1.2]
+            data: [0.23, 0.4, 0.78, 0.91, 0]
           }
         ]
       }
