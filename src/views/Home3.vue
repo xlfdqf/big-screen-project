@@ -81,22 +81,25 @@
             <div class="left-bottom">
               <div class="right-item-tit" >昨日样本分布</div>
                  <div class="yibiaochart" style="width:100%;height:90%;display:flex;align-items: center;"> 
-                    <div class="shuiuibochart-item">
-                        <div class="wave" style="background-color:rgba(51,174,201, 0.8);">
+                    <div class="shuiuibochart-item1">
+                       <p style="text-align:center">ROC面积<br/>0.802</p> 
+                        <!-- <div class="wave" style="background-color:rgba(51,174,201, 0.8);">
                           <p style="text-align:center">ROC面积<br/>0.802</p> 
-                        </div>
+                        </div> -->
                         <!-- <p class="wave-text">历史阈值平均数</p> -->
                     </div>
-                    <div class="shuiuibochart-item" style="border:3px #1DC5CF solid;">
-                       <div class="wave2" style="background-color:rgba(53,205,215, 0.8);">
+                    <div class="shuiuibochart-item2" style="border:3px #1DC5CF solid;">
+                        <p style="text-align:center">阈值<br/>1558.14</p> 
+                       <!-- <div class="wave2" style="background-color:rgba(53,205,215, 0.8);">
                           <p style="text-align:center">阈值<br/>1558.14</p> 
-                       </div>
+                       </div> -->
                         <!-- <p class="wave-text">历史ROC面积平均数</p> -->
                     </div>
-                    <div class="shuiuibochart-item" style="border:3px #0182D3 solid;">
-                       <div class="wave3" style="background-color:rgba(48,145,205, 0.8);">
+                    <div class="shuiuibochart-item3" style="border:3px #0182D3 solid;">
+                       <p style="text-align:center">历史<br/>31.29</p> 
+                       <!-- <div class="wave3" style="background-color:rgba(48,145,205, 0.8);">
                           <p style="text-align:center">历史<br/>31.29</p> 
-                       </div>
+                       </div> -->
                         <!-- <p class="wave-text">历史平均平均数</p> -->
                     </div>
                   </div>
@@ -347,16 +350,109 @@ export default {
   float: left;
 }
 /* 水波纹css container*/
-.shuiuibochart-item {
+.shuiuibochart-item1 {
   width: 30%;
   height: 90%;
-  padding: 10px;
-  border: 5px solid rgb(118, 218, 255);
+  border: 3px solid #00d2ff;
   border-radius: 50%;
   overflow: hidden;
   box-sizing: border-box;
-  /* margin-right: 0.3125rem; */
   margin-right: 20px;
+  transition: all 2s;
+}
+/* 此处要的效果是只有边框转动而内容不转动 */
+.shuiuibochart-item1:before {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-sizing: border-box;
+  content: "";
+  border: dashed 5px #00d2ff;
+  animation: whirl 9s linear infinite;
+}
+.shuiuibochart-item1 p {
+  color: #00d2ff;
+  font-weight: bold;
+  font-size: 18px;
+  /* width: 100%;
+  height: 100%; */
+  position: absolute;
+  text-align: center;
+  z-index: 9999;
+  top: 50%;
+  left: 12%;
+}
+.shuiuibochart-item2 {
+  width: 30%;
+  height: 90%;
+  border: 3px solid #1dc5cf;
+  border-radius: 50%;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin-right: 20px;
+  transition: all 2s;
+}
+/* 此处要的效果是只有边框转动而内容不转动 */
+.shuiuibochart-item2:before {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-sizing: border-box;
+  content: "";
+  border: dashed 5px #1dc5cf;
+  animation: whirl 9s linear infinite;
+}
+.shuiuibochart-item2 p {
+  color: #1dc5cf;
+  font-weight: bold;
+  font-size: 18px;
+  position: absolute;
+  text-align: center;
+  z-index: 9999;
+  top: 50%;
+  left: 42%;
+}
+.shuiuibochart-item3 {
+  width: 30%;
+  height: 90%;
+  border: 3px solid #0181d1;
+  border-radius: 50%;
+  overflow: hidden;
+  box-sizing: border-box;
+  /* margin-right: 20px; */
+  transition: all 2s;
+}
+/* 此处要的效果是只有边框转动而内容不转动 */
+.shuiuibochart-item3:before {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-sizing: border-box;
+  content: "";
+  border: dashed 5px #0181d1;
+  animation: whirl 9s linear infinite;
+}
+.shuiuibochart-item3 p {
+  color: #0181d1;
+  font-weight: bold;
+  font-size: 18px;
+  position: absolute;
+  text-align: center;
+  z-index: 9999;
+  top: 50%;
+  left: 75%;
+}
+/* 动画whirl,从0度旋转到360度 */
+@keyframes whirl {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 .wave-text {
   color: #00d2ff;
@@ -365,17 +461,6 @@ export default {
   margin-right: 0;
 }
 /* 水波纹效果 */
-/* .container {
-  margin: 0 auto;
-  width: 30%;
-  height: 90%;
-  padding: 5px;
-  border: 5px solid #34abff;
-  top: 100px;
-  left: 100px;
-  border-radius: 50%;
-  overflow: hidden;
-} */
 .wave {
   position: relative;
   left: -4px;
@@ -472,17 +557,7 @@ export default {
     transform: translate(-50%, -70%) rotate(360deg);
   }
 }
-.wave p {
-  color: #00d2ff;
-  font-weight: bold;
-  font-size: 18px;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  text-align: centerx;
-  z-index: 9999;
-  top: 20%;
-}
+
 .wave2 p {
   color: #1dc5cf;
   font-weight: bold;
