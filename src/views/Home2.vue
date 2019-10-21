@@ -60,7 +60,20 @@
                 <div class="count">
                   <p class="count-tit">浙江借款总人数</p>
                   <div class="center-top-item-img">
-                     <p class="count-css"><span>0</span><span>0</span><span>1</span><span>0</span><span>2</span></p>
+                     <p class="count-css"><span>0</span><span>0</span><span>1</span><span>0</span><span>2</span>
+                      <ul class="list">
+                        <li class="one">0</li>
+                        <li class="two">1</li>
+                        <li class="three">2</li>
+                        <li class="four">3</li>
+                        <li class="one">4</li>
+                        <li class="two">5</li>
+                        <li class="three">6</li>
+                        <li class="four">7</li>
+                         <li class="four">8</li>
+                        <li class="four">9</li>
+                        </ul>
+                     </p>
                   </div>
                 </div>
               </div>
@@ -69,7 +82,20 @@
                   <p  class="count-tit">浙江上月借款人数</p>
                   <div class="center-top-item-img">
                      <!-- <p><nx-count-up :start="1" :end="12541"/></p> -->
-                      <p class="count-css"><span>0</span><span>0</span><span>0</span><span>8</span><span>5</span></p>
+                      <p class="count-css"><span>0</span><span>0</span><span>0</span><span>8</span><span>5</span>
+                       <ul class="list">
+                        <li class="one">0</li>
+                        <li class="two">3</li>
+                        <li class="three">2</li>
+                        <li class="four">9</li>
+                        <li class="one">5</li>
+                        <li class="two">5</li>
+                        <li class="three">6</li>
+                        <li class="four">7</li>
+                         <li class="four">3</li>
+                        <li class="four">4</li>
+                        </ul>
+                      </p>
                   </div>
                   </div>
                 </div>
@@ -78,7 +104,20 @@
                   <p class="count-tit">浙江昨天借款人数</p>
                   <div class="center-top-item-img">
                      <!-- <p><nx-count-up :start="1" :end="1023"/></p> -->
-                      <p class="count-css"><span>0</span><span>0</span><span>0</span><span>3</span><span>6</span></p>
+                      <p class="count-css"><span>0</span><span>0</span><span>0</span><span>3</span><span>6</span>
+                       <ul class="list">
+                        <li class="one">0</li>
+                        <li class="two">3</li>
+                        <li class="three">7</li>
+                        <li class="four">9</li>
+                        <li class="one">1</li>
+                        <li class="two">5</li>
+                        <li class="three">8</li>
+                        <li class="four">7</li>
+                         <li class="four">5</li>
+                        <li class="four">4</li>
+                        </ul>
+                      </p>
                   </div>
                   </div></div>
             </div>
@@ -151,6 +190,56 @@ export default {
 </script>
 
 <style scoped>
+/* 滚动效果 */
+/* .menu-list {
+  list-style: none;
+  width: 25px;
+  box-sizing: border-box;
+}
+.menu-list li {
+  display: block;
+} */
+.list {
+  list-style: none;
+  width: 25px;
+  height: 32px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  /* float: right; */
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #1f304f;
+}
+.list li {
+  position: relative;
+  animation: myfirst 10s infinite;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  font-size: 28px;
+  color: #feec00;
+}
+@keyframes myfirst {
+  0% {
+    top: 0px;
+    background: #1f304f;
+  }
+  25% {
+    top: 0px;
+  }
+  50% {
+    top: -60px;
+  }
+  75% {
+    top: -120px;
+  }
+  100% {
+    top: -180px;
+  }
+}
+/* 滚动效果 */
 .fl {
   float: left;
 }
@@ -390,7 +479,7 @@ export default {
   font-family: "楷体";
   color: #feec00;
   font-size: 28px;
-  text-align: center;
+  /* text-align: center; */
   box-sizing: border-box;
   /* display: table-cell;
   vertical-align: middle; */
@@ -399,13 +488,16 @@ export default {
 
 /* 数字效果 */
 .count-css {
+  width: 90%;
+  /* border: 1px solid red; */
+  margin: 0 auto;
   position: relative;
   top: 10px;
 }
 .count-css span {
   background-color: #1f304f;
   box-sizing: border-box;
-  padding: 2px 5px;
+  padding: 2px 6px;
   margin: 2px 5px;
 }
 .count-css span:last-child {
