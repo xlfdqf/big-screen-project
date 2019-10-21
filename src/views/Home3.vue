@@ -37,20 +37,20 @@
               <div class="right-item-tit" >昨日样本分布</div>
                  <div class="yibiaochart" style="width:100%;height:90%;display:flex;align-items: center;"> 
                     <div class="shuiuibochart-item">
-                        <div class="wave">
-                          <p style="text-align:center">ROC面积<br/>0.58</p> 
+                        <div class="wave" style="background-color:rgba(51,174,201, 0.8);">
+                          <p style="text-align:center">ROC面积<br/>0.802</p> 
                         </div>
                         <!-- <p class="wave-text">历史阈值平均数</p> -->
                     </div>
                     <div class="shuiuibochart-item" style="border:3px #1DC5CF solid;">
-                       <div class="wave2" style="background-color:#1DC5CF;">
-                          <p style="text-align:center">阈值<br/>152</p> 
+                       <div class="wave2" style="background-color:rgba(53,205,215, 0.8);">
+                          <p style="text-align:center">阈值<br/>1558.14</p> 
                        </div>
                         <!-- <p class="wave-text">历史ROC面积平均数</p> -->
                     </div>
                     <div class="shuiuibochart-item" style="border:3px #0182D3 solid;">
-                       <div class="wave3" style="background-color:#0182D3;">
-                          <p style="text-align:center">历史<br/>123</p> 
+                       <div class="wave3" style="background-color:rgba(48,145,205, 0.8);">
+                          <p style="text-align:center">历史<br/>31.29</p> 
                        </div>
                         <!-- <p class="wave-text">历史平均平均数</p> -->
                     </div>
@@ -320,7 +320,7 @@ export default {
   position: absolute;
   width: 140%;
   height: 140%;
-  top: 25%;
+  top: 10%;
   left: 50%;
   /* 浅色 */
   /* background-color: #026b99; */
