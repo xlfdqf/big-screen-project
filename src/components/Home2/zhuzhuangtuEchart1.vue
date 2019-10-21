@@ -77,13 +77,13 @@ export default {
             name: "可疑",
             type: "bar",
             // label: labelOption,
-            data: [220, 182, 191, 225]
+            data: [220, 182, 191, 209]
           },
           {
             name: "劣质",
             type: "bar",
             // label: labelOption,
-            data: [150, 232, 201, 225]
+            data: [150, 232, 201, 104]
           }
         ]
       }

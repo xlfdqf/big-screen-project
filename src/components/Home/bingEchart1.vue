@@ -21,7 +21,7 @@ export default {
         color: ["#E56E6E", "#2853EC", "#FEB763", "#00C0DD"],
         tooltip: {
           trigger: "item",
-          formatter: "{a} <br/>{b} : {c} ({d}%)"
+          formatter: "{b} : {c} ({d}%)"
         },
         legend: {
           x: "center",
@@ -43,6 +43,10 @@ export default {
             type: "pie",
             radius: [30, 110],
             roseType: "area",
+            minAngle: 5, //最小的扇区角度（0 ~ 360），用于防止某个值过小导致扇区太小影响交互
+            avoidLabelOverlap: true, //是否启用防止标签重叠策略
+            radius: ["30%", "60%"],
+            center: ["50%", "50%"],
             // 修改字体颜色的代码begin
             itemStyle: {
               normal: {

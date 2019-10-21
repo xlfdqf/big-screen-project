@@ -32,6 +32,10 @@ export default {
         calculable: true,
         series: [
           {
+            minAngle: 5, //最小的扇区角度（0 ~ 360），用于防止某个值过小导致扇区太小影响交互
+            avoidLabelOverlap: true, //是否启用防止标签重叠策略
+            radius: ["30%", "60%"],
+            center: ["50%", "50%"],
             name: "面积模式",
             type: "pie",
             radius: [30, 110],

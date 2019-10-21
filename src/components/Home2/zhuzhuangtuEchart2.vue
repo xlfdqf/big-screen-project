@@ -40,7 +40,7 @@ export default {
                 color: "#ffffff" //x轴字体颜色
               }
             },
-            data: ["7天", "14天", "21天", "30天"]
+            data: ["1月", "3月", "5月", "7月", "9月", "11月"]
           }
         ],
         yAxis: [
@@ -70,20 +70,17 @@ export default {
             name: "优质",
             type: "bar",
             barGap: 0,
-            // label: labelOption,
-            data: [320, 332, 301, 225]
+            data: [320, 332, 301, 225, 320, 332]
           },
           {
             name: "可疑",
             type: "bar",
-            // label: labelOption,
-            data: [220, 182, 191, 225]
+            data: [220, 182, 191, 225, 182, 191]
           },
           {
             name: "劣质",
             type: "bar",
-            // label: labelOption,
-            data: [150, 232, 201, 225]
+            data: [150, 232, 201, 225, 191, 225]
           }
         ]
       }
