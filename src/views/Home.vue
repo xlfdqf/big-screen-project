@@ -317,8 +317,9 @@ export default {
 
 /* left css */
 .left-top {
-  width: 100%;
+  width: 90%;
   height: 70%;
+  margin: 0 auto;
   /* background: #ffffff; */
   box-sizing: border-box;
   /* padding: 1.25rem; */

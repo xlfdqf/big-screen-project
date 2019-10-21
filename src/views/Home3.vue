@@ -403,13 +403,13 @@ export default {
 /* left css */
 .left-top {
   width: 100%;
-  height: 70%;
+  height: 100%;
   box-sizing: border-box;
   /* background-color: #3887aa; */
 }
 .left-top1 {
   width: 22%;
-  height: 100%;
+  height: 70%;
   /* background-color: #00d2ff; */
   float: left;
 }
@@ -420,8 +420,10 @@ export default {
   /* background-color: #ffffff; */
 }
 .left-bottom {
-  width: 50%;
-  height: 28%;
+  width: 25%;
+  height: 20%;
+  position: absolute;
+  bottom: 40px;
   box-sizing: border-box;
   padding: 0.625rem 1.25rem;
   background: url("../assets/image/kuang.png");

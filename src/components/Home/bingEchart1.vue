@@ -11,13 +11,13 @@ export default {
   data() {
     return {
       option: {
-        grid: {
-          left: "3%",
-          top: "3%",
-          right: "4%",
-          bottom: "3%",
-          containLabel: true
-        },
+        // grid: {
+        //   left: "3%",
+        //   top: "3%",
+        //   right: "4%",
+        //   bottom: "3%",
+        //   containLabel: true
+        // },
         color: ["#E56E6E", "#2853EC", "#FEB763", "#00C0DD"],
         tooltip: {
           trigger: "item",
@@ -41,12 +41,22 @@ export default {
           {
             name: "面积模式",
             type: "pie",
-            radius: [30, 110],
+            // radius: [30, 110],
             roseType: "area",
             minAngle: 5, //最小的扇区角度（0 ~ 360），用于防止某个值过小导致扇区太小影响交互
             avoidLabelOverlap: true, //是否启用防止标签重叠策略
             radius: ["30%", "60%"],
             center: ["50%", "50%"],
+            // label: {
+            //   normal: {
+            //     formatter(v) {
+            //       let text = v.name;
+            //       return text.length < 6
+            //         ? text
+            //         : `${text.slice(0, 6)}\n${text.slice(6)}`;
+            //     }
+            //   }
+            // },
             // 修改字体颜色的代码begin
             itemStyle: {
               normal: {
