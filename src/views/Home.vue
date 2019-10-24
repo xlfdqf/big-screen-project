@@ -251,7 +251,7 @@ export default {
   /* border: 1px solid red; */
 }
 .left {
-  width: 65%;
+  width: 70%;
   height: 100%;
   /* background-color: #3887aa; */
 }
@@ -262,7 +262,7 @@ export default {
   background-size: 100% 100%;
 } */
 .right {
-  width: 35%;
+  width: 30%;
   height: 100%;
   box-sizing: border-box;
   padding-top: 1.25rem;
@@ -345,7 +345,7 @@ export default {
   /* background: url("https://ow.speedbi.cn:7272/uploads/img/08:57:00:f6:b9:fe/7c8ba7d0-ebc6-11e9-8599-fd5d72c7833f.png"); */
   background: url("../assets/image/person.gif");
   /* background: url("../assets/image/people2.png"); */
-  background-size: 100% 100%;
+  background-size: 100% auto;
 }
 /* left css end */
 

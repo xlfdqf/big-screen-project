@@ -16,17 +16,17 @@
                   <div class="yibiaochart"> 
                     <div class="progress">
                         <div class="progress-item">
-                          <span style="width:10%;height:10%;padding-left:0" class="fl">优质</span>
+                          <span style="width:10%;height:10%;padding-left:0;font-size:18px;" class="fl">优质</span>
                           <el-progress :text-inside="true" :stroke-width="24" :percentage="5" style="width:60%;height:80%;"  class="fl"></el-progress>
                            <span style="width:30%;height:10%;font-weight:bold;" class="fl"><nx-count-up :start="1" :end="55"/>人</span>
                         </div>
                         <div class="progress-item">
-                          <span style="width:10%;height:10%;padding-left:0" class="fl">可疑</span>
+                          <span style="width:10%;height:10%;padding-left:0;font-size:18px;" class="fl">可疑</span>
                           <el-progress :text-inside="true" :stroke-width="22" :percentage="30" style="width:60%;height:80%;"  class="fl"></el-progress>
                            <span style="width:30%;height:10%;font-weight:bold;" class="fl"><nx-count-up :start="30" :end="308"/>人</span>
                         </div>
                         <div class="progress-item">
-                          <span style="width:10%;height:10%;padding-left:0" class="fl">劣质</span>
+                          <span style="width:10%;height:10%;padding-left:0;font-size:18px;" class="fl">劣质</span>
                           <el-progress :text-inside="true" :stroke-width="20" :percentage="90" style="width:60%;height:80%;"  class="fl"></el-progress>
                             <span style="width:30%;height:10%;font-weight:bold;" class="fl"><nx-count-up :start="1" :end="952"/>人</span>
                         </div>
@@ -166,7 +166,7 @@ import huanEchart2 from "@/components/Home2/huanEchart2"; //环形图1组件
 import zhexianEchart from "@/components/Home2/zhexianEchart"; //折线图1组件
 import zhuzhuangtuEchart1 from "@/components/Home2/zhuzhuangtuEchart1"; //柱状图1组件
 import zhuzhuangtuEchart2 from "@/components/Home2/zhuzhuangtuEchart2"; //柱状图2组件
-import bingEchart1 from "@/components/Home/bingEchart1"; //饼图1组件
+import bingEchart1 from "@/components/Home2/bingEchart1"; //饼图1组件
 import mapEchart from "@/components/Home2/mapEchart"; //中国地图组件
 export default {
   name: "home2",
@@ -416,7 +416,7 @@ export default {
 .progress-item {
   box-sizing: border-box;
   width: 100%;
-  height: 30%;
+  height: 35%;
 }
 .progress-item span {
   color: #00d2ff;
