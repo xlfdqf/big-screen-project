@@ -5,7 +5,7 @@
          <div class="top-content">
            <p class="top-title">智慧金融太空舱数据大屏</p>
            <div class="top-img"><div class="top-img-item"></div></div>
-           <div class="top-date" style="font-family:'楷体'"><span style="color:#00D2FF;">2019&nbsp;</span>年<span style="color:#00D2FF;">&nbsp;11</span>&nbsp;月</div>
+           <div class="top-date" style="font-family:'楷体'"><span style="color:#00D2FF;">2019</span>年<span style="color:#00D2FF;">11</span>月</div>
          </div>
       </div>
        <div class="bottom">
@@ -25,7 +25,7 @@
 			   <div class="right fl">
             <div class="right-item">
               <div class="right-items">
-                  <div class="right-item-tit">历史用户统计</div>
+                  <div class="right-item-tit">历史特征</div>
                   <div class="yibiaochart"> 
                     <div class="yibiaochart-item"><yibiaoEchart1 /><p>总特征：479</p></div>
                     <div class="yibiaochart-item"><yibiaoEchart2 /><p>模型特征：29</p></div>
@@ -237,9 +237,10 @@ export default {
 }
 .top-date {
   color: #ffffff;
-  font-size: 0.875rem;
+  font-size: 30px;
   float: right;
-  right: -6.25rem;
+  /* right: -6.25rem; */
+  right: -170px;
   position: absolute;
 
   /* font-family: "LESLIE-Regular" !important; */
@@ -265,7 +266,7 @@ export default {
   width: 30%;
   height: 100%;
   box-sizing: border-box;
-  padding-top: 1.25rem;
+  padding-top: 0.25rem;
 }
 .right-items {
   width: 95%;
@@ -279,7 +280,8 @@ export default {
   height: 29%;
   box-sizing: border-box;
   padding: 0 10px;
-  margin-bottom: 1.25rem;
+  /* margin-bottom: 1.25rem; */
+  margin-bottom: 40px;
   background: url("../assets/image/kuang.png");
   background-size: 100% 100%;
   /* border: 1px solid #02c1d4; */
